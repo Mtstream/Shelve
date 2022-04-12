@@ -4,6 +4,7 @@
 	"block.shelve.igniter":"Igniter",
 	"block.shelve.harvester":"Harvester",
 	"block.shelve.trash_can":"Trash Can",
+	"block.shelve.crystal_ball":"Crystal Ball",
 	
 	"block.shelve.humidity_detector":"Humidity Detector",
 	"block.shelve.static_detector":"Static detector",
@@ -17,6 +18,7 @@
 	"item.shelve.handheld_dispenser":"Handheld_dispenser",
 	"item.shelve.cheese":"Cheese",
 	"item.shelve.marinide_ingot":"Marinide Ingot",
+	"block.shelve.amethyst_ball":"Amethyst",
 	
 	"text.openbutnot.message":"Open, but not fully open"
 }

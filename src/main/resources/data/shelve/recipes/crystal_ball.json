@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "gSg"
+    ],
+    "key": {
+        "#": {
+            "item": "shelve:amethyst_ball"
+        },
+        "g": {
+            "item": "minecraft:gold_ingot"
+        },
+        "S": {
+            "item": "minecraft:stripped_spruce_log"
+        }
+    },
+    "result": {
+        "item": "shelve:crystal_ball",
+        "count": 1
+    }
+}

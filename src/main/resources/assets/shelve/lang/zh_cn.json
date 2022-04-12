@@ -4,6 +4,7 @@
 	"block.shelve.igniter":"点火器",
 	"block.shelve.harvester":"收割器",
 	"block.shelve.trash_can":"垃圾桶",
+	"block.shelve.crystal_ball":"水晶球",
 	
 	"block.shelve.humidity_detector":"湿度探测器",
 	"block.shelve.static_detector":"静电探测器",
@@ -17,6 +18,7 @@
 	"item.shelve.handheld_dispenser":"手持式发射器",
 	"item.shelve.cheese":"芝士",
 	"item.shelve.marinide_ingot":"海晶金锭",
+	"block.shelve.amethyst_ball":"紫水晶球部件",
 	
 	"text.openbutnot.message":"打开了，但没完全打开"
 }
