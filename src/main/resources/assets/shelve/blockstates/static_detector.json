@@ -1,0 +1,7 @@
+{
+	"variants":{
+		"":{
+			"model":"shelve:block/static_detector"
+		}
+	}
+}

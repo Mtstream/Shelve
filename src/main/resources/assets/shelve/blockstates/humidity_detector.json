@@ -1,0 +1,10 @@
+{
+	"variants":{
+		"water_detecting=true":{
+			"model":"shelve:block/humidity_detector_water"
+		},
+		"water_detecting=false":{
+			"model":"shelve:block/humidity_detector"
+		}
+	}
+}

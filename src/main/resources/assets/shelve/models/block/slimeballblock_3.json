@@ -1,0 +1,42 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"0": "shelve:block/slimeball_block",
+		"1": "shelve:block/slimeball_block_inner",
+		"particle": "shelve:block/slimeball_block"
+	},
+	"elements": [
+		{
+			"from": [3, 0, 3],
+			"to": [13, 10, 13],
+			"faces": {
+				"north": {"uv": [0, 0, 8, 16], "texture": "#0"},
+				"east": {"uv": [8, 0, 0, 16], "texture": "#0"},
+				"south": {"uv": [8, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [8, 0, 16, 16], "texture": "#0"},
+				"up": {"uv": [8, 0, 0, 16], "texture": "#0"},
+				"down": {"uv": [8, 0, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4.5, 1.5, 4.5],
+			"to": [11.5, 8.5, 11.5],
+			"faces": {
+				"north": {"uv": [1.33333, 2.66667, 6.66667, 13.33333], "texture": "#1"},
+				"east": {"uv": [6.66667, 2.66667, 1.33333, 13.33333], "texture": "#1"},
+				"south": {"uv": [9.33333, 2.66667, 14.66667, 13.33333], "texture": "#1"},
+				"west": {"uv": [9.33333, 2.66667, 14.66667, 13.33333], "texture": "#1"},
+				"up": {"uv": [6.66667, 2.66667, 1.33333, 13.33333], "texture": "#1"},
+				"down": {"uv": [9.33333, 2.66667, 14.66667, 13.33333], "texture": "#1"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "VoxelShapes",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

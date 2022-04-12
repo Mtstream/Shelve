@@ -1,0 +1,12 @@
+{
+	"replace":false,
+	"values":[
+		"shelve:water_cage",
+		"shelve:channeler",
+		"shelve:igniter",
+		"shelve:harvester",
+		"shelve:trash_can",
+		"shelve:humidity_detector",
+		"shelve:static_detector"
+	]
+}

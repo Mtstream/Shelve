@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "cCc",
+        "GDR",
+        "ccc"
+    ],
+    "key": {
+        "c": {
+            "item": "minecraft:copper_ingot"
+        },
+        "C": {
+            "item": "minecraft:copper_block"
+        },
+        "G": {
+            "item": "minecraft:glowstone"
+        },
+        "D": {
+            "item": "shelve:marinide_ingot"
+        },
+        "R": {
+            "item": "minecraft:redstone_block"
+        }
+    },
+    "result": {
+        "item": "shelve:channeler",
+        "count": 1
+    }
+}

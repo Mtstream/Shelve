@@ -1,0 +1,22 @@
+{
+	"block.shelve.water_cage":"蓄水笼",
+	"block.shelve.channeler":"引雷器",
+	"block.shelve.igniter":"点火器",
+	"block.shelve.harvester":"收割器",
+	"block.shelve.trash_can":"垃圾桶",
+	
+	"block.shelve.humidity_detector":"湿度探测器",
+	"block.shelve.static_detector":"静电探测器",
+	
+	"item.shelve.turf":"草皮",
+	
+	"item.shelve.empty_box":"空的箱子",
+	"item.shelve.mysterious_box":"神秘箱子",
+	"item.shelve.infernal_box":"下界箱子",
+	"item.shelve.marine_box":"深海箱子",
+	"item.shelve.handheld_dispenser":"手持式发射器",
+	"item.shelve.cheese":"芝士",
+	"item.shelve.marinide_ingot":"海晶金锭",
+	
+	"text.openbutnot.message":"打开了，但没完全打开"
+}

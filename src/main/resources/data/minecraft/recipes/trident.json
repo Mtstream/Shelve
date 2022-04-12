@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " ##",
+        " i#",
+        "i  "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:quartz"
+        },
+        "i": {
+            "item": "shelve:marinide_ingot"
+        }
+    },
+    "result": {
+        "item": "minecraft:trident",
+        "count": 1
+    }
+}

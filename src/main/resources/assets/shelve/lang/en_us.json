@@ -1,0 +1,22 @@
+{
+	"block.shelve.water_cage":"Water Cage",
+	"block.shelve.channeler":"Channeler",
+	"block.shelve.igniter":"Igniter",
+	"block.shelve.harvester":"Harvester",
+	"block.shelve.trash_can":"Trash Can",
+	
+	"block.shelve.humidity_detector":"Humidity Detector",
+	"block.shelve.static_detector":"Static detector",
+	
+	"item.shelve.turf":"Turf",
+	
+	"item.shelve.empty_box":"Empty Box",
+	"item.shelve.mysterious_box":"Mysterious Box",
+	"item.shelve.infernal_box":"Infernal Box",
+	"item.shelve.marine_box":"Marine Box",
+	"item.shelve.handheld_dispenser":"Handheld_dispenser",
+	"item.shelve.cheese":"Cheese",
+	"item.shelve.marinide_ingot":"Marinide Ingot",
+	
+	"text.openbutnot.message":"Open, but not fully open"
+}

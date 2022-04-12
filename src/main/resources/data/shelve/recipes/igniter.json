@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#M#",
+        "#I#",
+        "#W#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:blackstone"
+        },
+        "M": {
+            "item": "minecraft:magma_block"
+        },
+        "I": {
+            "item": "minecraft:iron_nugget"
+        },
+        "W": {
+            "item": "minecraft:magma_cream"
+        }
+    },
+    "result": {
+        "item": "shelve:igniter",
+        "count": 1
+    }
+}

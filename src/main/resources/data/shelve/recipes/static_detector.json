@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#L#",
+        "GcR",
+        "___"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:glass"
+        },
+        "L": {
+            "item": "minecraft:lightning_rod"
+        },
+        "G": {
+            "item": "minecraft:glowstone_dust"
+        },
+        "c": {
+            "item": "minecraft:copper_ingot"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "_": {
+            "item": "minecraft:waxed_cut_copper_slab"
+        }
+    },
+    "result": {
+        "item": "shelve:static_detector",
+        "count": 1
+    }
+}

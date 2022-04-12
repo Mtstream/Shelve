@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#S#",
+        "PPP",
+        "___"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:glass"
+        },
+        "S": {
+            "item": "minecraft:sponge"
+        },
+        "P": {
+            "item": "minecraft:prismarine_crystals"
+        },
+        "_": {
+            "item": "minecraft:smooth_stone_slab"
+        }
+    },
+    "result": {
+        "item": "shelve:humidity_detector",
+        "count": 1
+    }
+}

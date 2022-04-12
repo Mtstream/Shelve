@@ -1,0 +1,13 @@
+{
+"variants": {
+    "size=1": {
+      "model": "shelve:block/slimeballblock"
+      },
+      "size=2": {
+      "model": "shelve:block/slimeballblock_2"
+      },
+      "size=3": {
+      "model": "shelve:block/slimeballblock_3"
+      }
+      }
+}

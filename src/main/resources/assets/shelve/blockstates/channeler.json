@@ -1,0 +1,34 @@
+{
+	"variants":{
+		"facing=north,enable=true":{
+			"model":"shelve:block/channeler"
+		},
+		"facing=east,enable=true":{
+			"model":"shelve:block/channeler",
+			"y":90
+		},
+		"facing=south,enable=true":{
+			"model":"shelve:block/channeler",
+			"y":180
+		},
+		"facing=west,enable=true":{
+			"model":"shelve:block/channeler",
+			"y":270
+		},
+		"facing=north,enable=false":{
+			"model":"shelve:block/channeler_off"
+		},
+		"facing=east,enable=false":{
+			"model":"shelve:block/channeler_off",
+			"y":90
+		},
+		"facing=south,enable=false":{
+			"model":"shelve:block/channeler_off",
+			"y":180
+		},
+		"facing=west,enable=false":{
+			"model":"shelve:block/channeler_off",
+			"y":270
+		}
+	}
+}

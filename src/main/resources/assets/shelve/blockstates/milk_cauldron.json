@@ -1,0 +1,13 @@
+{
+	"variants":{
+		"progress=1":{
+			"model":"shelve:block/milk_cauldron"
+		},
+		"progress=2":{
+			"model":"shelve:block/milk_cauldron_1"
+		},
+		"progress=3":{
+			"model":"shelve:block/cheese_cauldron"
+		}
+	}
+}
