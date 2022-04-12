@@ -5,7 +5,7 @@
 		"1": "shelve:block/crystal_base_bottom",
 		"2": "shelve:block/crystal_ball",
 		"3": "shelve:block/crystal_tr_ball",
-		"particle": "shelve:block/crystal_base"
+		"particle": "shelve:block/crystal_ball"
 	},
 	"elements": [
 		{
