@@ -71,7 +71,7 @@ public class BlockInit {
 					.strength(2.0f)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties()));
 	public static final RegistryObject<Block> CRYSTAL_BALL = register("crystal_ball",
-			() -> new CrystalBallBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).dynamicShape().sound(SoundType.AMETHYST)
+			() -> new CrystalBallBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).dynamicShape().sound(SoundType.AMETHYST).lightLevel($->12)
 					.strength(1.5f)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 	
