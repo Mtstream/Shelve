@@ -26,7 +26,7 @@ public class ItemInit {
 	
 	public static final RegistryObject<Item> CHEESE = Register("cheese", ()->new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(new FoodProperties.Builder().nutrition(5).saturationMod(4).build())));
 	//Unfinished
-	public static final RegistryObject<Item> TRANSMUTATION_MAGNET = Register("transmutation_magnet", ()->new TransmutationMagnetItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> TRANSMUTATION_MAGNET = Register("transmutation_magnet", ()->new TransmutationMagnetItem(new Item.Properties()));
 	
 	public static final RegistryObject<Item> EMPTY_BOX = Register("empty_box", ()->new Item(new Item.Properties()));
 	public static final RegistryObject<Item> MYSTERIOUS_BOX = Register("mysterious_box", ()->new MysteriousBoxItem(new Item.Properties()));
