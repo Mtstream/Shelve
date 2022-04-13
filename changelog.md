@@ -1,4 +1,4 @@
-## Shelve 0.0.0.1
+## Shelve 0.0.1
 ****
 #### Items
 - Cheese
