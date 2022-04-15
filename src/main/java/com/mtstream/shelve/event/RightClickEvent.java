@@ -45,5 +45,13 @@ public class RightClickEvent {
 				stack.hurtAndBreak(1, pla, (c) -> {c.broadcastBreakEvent(han);});
 			}
 		}
+		if(stack.getItem().equals(Items.SHEARS) && state.getBlock().equals(Blocks.TNT)) {
+			if(!lev.isClientSide) {
+				Block.popResourceFromFace(lev, pos, Direction.UP, new ItemStack(Items.GUNPOWDER));
+				lev.setBlockAndUpdate(pos, BlockInit.INSTANT_TNT.get().defaultBlockState());
+				lev.playSound(null, pos, SoundEvents.SHEEP_SHEAR, SoundSource.BLOCKS, 1.0f, 1.0f);
+				stack.hurtAndBreak(1, pla, (c) -> {c.broadcastBreakEvent(han);});
+			}
+		}
 	}
 }

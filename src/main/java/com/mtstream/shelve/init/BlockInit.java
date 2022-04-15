@@ -5,9 +5,11 @@ import com.google.common.base.Supplier;
 import com.mtstream.shelve.Shelve;
 import com.mtstream.shelve.block.ChannelerBlock;
 import com.mtstream.shelve.block.CrystalBallBlock;
+import com.mtstream.shelve.block.FireCrackerBlock;
 import com.mtstream.shelve.block.HarvesterBlock;
 import com.mtstream.shelve.block.HumidityDetectorBlock;
 import com.mtstream.shelve.block.IgniterBlock;
+import com.mtstream.shelve.block.InstantTntBlock;
 import com.mtstream.shelve.block.MilkCauldron;
 import com.mtstream.shelve.block.StaticDetectorBlock;
 import com.mtstream.shelve.block.TrashCanBlock;
@@ -74,6 +76,12 @@ public class BlockInit {
 			() -> new CrystalBallBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).dynamicShape().sound(SoundType.AMETHYST).lightLevel($->12)
 					.strength(1.5f)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+	public static final RegistryObject<Block> INSTANT_TNT = register("instant_tnt",
+			() -> new InstantTntBlock(BlockBehaviour.Properties.of(Material.EXPLOSIVE).instabreak().sound(SoundType.GRASS)), 
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+	public static final RegistryObject<Block> FIRECRACKER = register("firecracker",
+			() -> new FireCrackerBlock(BlockBehaviour.Properties.of(Material.EXPLOSIVE).instabreak().dynamicShape().sound(SoundType.GRASS)), 
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 	
 
 	private static <T extends Block> RegistryObject<T> registerBlock(final String name,final Supplier<? extends T> block){
