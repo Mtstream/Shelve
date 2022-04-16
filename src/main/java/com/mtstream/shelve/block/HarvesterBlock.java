@@ -11,16 +11,21 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BushBlock;
+import net.minecraft.world.level.block.CocoaBlock;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.NetherWartBlock;
 import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.SugarCaneBlock;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition.Builder;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -111,7 +116,27 @@ public class HarvesterBlock extends Block{
 		         lev.playSound((Player)null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + lev.random.nextFloat() * 0.4F);
 		         lev.setBlock(pos, state.setValue(SweetBerryBushBlock.AGE, Integer.valueOf(1)), 2);
 			}
-		}else {}
+		}else 
+		if(state.getBlock() instanceof CocoaBlock){
+			if(state.getValue(CocoaBlock.AGE) == 2) {
+				lev.destroyBlock(pos, true);
+				lev.setBlockAndUpdate(pos, state.setValue(CocoaBlock.AGE, 0));
+			}
+		}
+		if(state.getBlock() instanceof BushBlock||state.getCollisionShape(lev, pos).isEmpty()) {
+			for(Property<?> prop : state.getProperties()) {
+				if(!(prop instanceof IntegerProperty)) {
+					continue;
+				}
+				if(!prop.getName().equals(BlockStateProperties.AGE_1.getName())) {
+					continue;
+				}
+				lev.setBlock(pos, state.setValue((IntegerProperty)prop, 0), 2);
+			}
+		}
+		if(state.getBlock() instanceof SugarCaneBlock) {
+			lev.destroyBlock(pos, true);
+		}
 	}
 
 }
