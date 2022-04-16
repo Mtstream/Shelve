@@ -5,6 +5,9 @@
 	"block.shelve.harvester":"Harvester",
 	"block.shelve.trash_can":"Trash Can",
 	"block.shelve.crystal_ball":"Crystal Ball",
+	"block.shelve.cheese_cake":"Cheese Cake",
+	"block.shelve.firecracker":"Fire Cracker",
+	"block.shelve.instant_tnt":"INT",
 	
 	"block.shelve.humidity_detector":"Humidity Detector",
 	"block.shelve.static_detector":"Static detector",

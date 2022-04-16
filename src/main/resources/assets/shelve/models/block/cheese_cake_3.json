@@ -1,0 +1,24 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"3": "shelve:block/cheese_cake_bottom",
+		"top": "shelve:block/cheese_cake_top",
+		"particle": "shelve:block/cheese_cake_side",
+		"4": "shelve:block/cheese_cake_inner",
+		"side": "shelve:block/cheese_cake_side"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 1],
+			"to": [15, 6, 9],
+			"faces": {
+				"north": {"uv": [1, 10, 15, 16], "texture": "#side"},
+				"east": {"uv": [7, 10, 15, 16], "texture": "#side"},
+				"south": {"uv": [1, 10, 15, 16], "texture": "#4"},
+				"west": {"uv": [1, 10, 9, 16], "texture": "#side"},
+				"up": {"uv": [1, 1, 15, 9], "texture": "#top"},
+				"down": {"uv": [1, 7, 15, 15], "texture": "#3", "cullface": "down"}
+			}
+		}
+	]
+}

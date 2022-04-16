@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+    	" S ",
+        "#E#",
+        "CCC"
+    ],
+    "key": {
+    	"S": {
+  	  		"item":"minecraft:sugar"
+    	},
+        "#": {
+            "item": "shelve:cheese"
+        },
+        "E": {
+            "item": "minecraft:egg"
+        },
+        "C": {
+            "item": "minecraft:cookie"
+        }
+    },
+    "result": {
+        "item": "shelve:cheese_cake",
+        "count": 1
+    }
+}

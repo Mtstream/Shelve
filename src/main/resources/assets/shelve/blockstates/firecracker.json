@@ -1,0 +1,21 @@
+{
+	"variants":{
+		"":[
+			{
+				"model":"shelve:block/firecracker"
+			},
+			{
+				"model":"shelve:block/firecracker",
+				"y":90
+			},
+			{
+				"model":"shelve:block/firecracker",
+				"y":180
+			},
+			{
+				"model":"shelve:block/firecracker",
+				"y":270
+			}
+		]
+	}
+}
