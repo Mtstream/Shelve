@@ -5,13 +5,18 @@ import com.google.common.base.Supplier;
 import com.mtstream.shelve.Shelve;
 import com.mtstream.shelve.block.ChannelerBlock;
 import com.mtstream.shelve.block.CheeseCakeBlock;
+import com.mtstream.shelve.block.ChimneyBlock;
+import com.mtstream.shelve.block.CreepshroomBlock;
 import com.mtstream.shelve.block.CrystalBallBlock;
+import com.mtstream.shelve.block.EggCartonBlock;
 import com.mtstream.shelve.block.FireCrackerBlock;
 import com.mtstream.shelve.block.HarvesterBlock;
 import com.mtstream.shelve.block.HumidityDetectorBlock;
 import com.mtstream.shelve.block.IgniterBlock;
 import com.mtstream.shelve.block.InstantTntBlock;
+import com.mtstream.shelve.block.MegaGlowBerryBlock;
 import com.mtstream.shelve.block.MilkCauldron;
+import com.mtstream.shelve.block.SoulJackOLantern;
 import com.mtstream.shelve.block.StaticDetectorBlock;
 import com.mtstream.shelve.block.TrashCanBlock;
 import com.mtstream.shelve.block.WaterCageBlock;
@@ -19,7 +24,6 @@ import com.mtstream.shelve.block.WaterCageBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -42,17 +46,17 @@ public class BlockInit {
 			
 	public static final RegistryObject<Block> CHANNELER = register("channeler",
 			() -> new ChannelerBlock(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).dynamicShape().sound(SoundType.COPPER)
-					.strength(3.0f)),
+					.requiresCorrectToolForDrops().strength(2.0F, 6.0F)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 			
 	public static final RegistryObject<Block> IGNITER = register("igniter",
 			() -> new IgniterBlock(BlockBehaviour.Properties.copy(Blocks.BLACKSTONE).sound(SoundType.STONE)
-					.strength(1.5f)),
+					.requiresCorrectToolForDrops().strength(1.5F, 5.0F)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 			
 	public static final RegistryObject<Block> HARVESTER = register("harvester",
 			() -> new HarvesterBlock(BlockBehaviour.Properties.copy(Blocks.PISTON).dynamicShape().sound(SoundType.STONE)
-					.strength(1.5f)),
+					.requiresCorrectToolForDrops().strength(1.5F, 5.0F)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 			
 	public static final RegistryObject<Block> HUMIDITY_DETECTOR = register("humidity_detector",
@@ -67,12 +71,12 @@ public class BlockInit {
 			
 	public static final RegistryObject<Block> TRASH_CAN = register("trash_can",
 			() -> new TrashCanBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).dynamicShape().sound(SoundType.LANTERN)
-					.strength(2.0f)),
+					.requiresCorrectToolForDrops().strength(2.0F, 6.0F)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 			
 	public static final RegistryObject<Block> MILK_CAULDRON = register("milk_cauldron",
 			() -> new MilkCauldron(BlockBehaviour.Properties.copy(Blocks.CAULDRON).dynamicShape().sound(SoundType.METAL)
-					.strength(2.0f)),
+					.requiresCorrectToolForDrops().strength(2.0F, 6.0F)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties()));
 	public static final RegistryObject<Block> CRYSTAL_BALL = register("crystal_ball",
 			() -> new CrystalBallBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).dynamicShape().sound(SoundType.AMETHYST).lightLevel($->12)
@@ -88,6 +92,30 @@ public class BlockInit {
 			() -> new CheeseCakeBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).dynamicShape().sound(SoundType.WOOL)
 					.strength(0.5f)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
+	public static final RegistryObject<Block> MEGA_GLOW_BERRY = register("mega_glow_berry",
+			() -> new MegaGlowBerryBlock(BlockBehaviour.Properties.copy(Blocks.MELON).dynamicShape().sound(SoundType.SWEET_BERRY_BUSH).lightLevel($ -> 14)
+					.strength(0.7f)),
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
+	public static final RegistryObject<Block> SOUL_JACK_O_LANTERN = register("soul_jack_o_lantern",
+			() -> new SoulJackOLantern(BlockBehaviour.Properties.copy(Blocks.PUMPKIN).dynamicShape().sound(SoundType.WOOD).lightLevel($ -> 12)
+					.strength(1.0f)),
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+	public static final RegistryObject<Block> CREEPSHROOM = register("creepshroom",
+			() -> new CreepshroomBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).dynamicShape().sound(SoundType.SWEET_BERRY_BUSH)
+					.instabreak()),
+			object -> () -> new BlockItem(object.get(), new Item.Properties()));
+	public static final RegistryObject<Block> EGG_CARTON = register("egg_carton",
+			() -> new EggCartonBlock(BlockBehaviour.Properties.of(Material.WOOL).dynamicShape().sound(SoundType.SWEET_BERRY_BUSH)
+					.strength(0.5f)),
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+	public static final RegistryObject<Block> BRICKS_CHIMNEY = register("bricks_chimney",
+			() -> new ChimneyBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS).dynamicShape().sound(SoundType.STONE)
+					.requiresCorrectToolForDrops().strength(2.0F, 6.0F)),
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+	public static final RegistryObject<Block> STONE_BRICKS_CHIMNEY = register("stone_bricks_chimney",
+			() -> new ChimneyBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).dynamicShape().sound(SoundType.STONE)
+					.requiresCorrectToolForDrops().strength(2.0F, 6.0F)),
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 	
 
 	private static <T extends Block> RegistryObject<T> registerBlock(final String name,final Supplier<? extends T> block){

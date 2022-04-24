@@ -9,6 +9,8 @@
 		"shelve:humidity_detector",
 		"shelve:static_detector",
 		"shelve:milk_cauldron",
+		"shelve:bricks_chimney",
+		"shelve:stone_bricks_chimney",
 		"shelve:crystal_ball"
 	]
 }

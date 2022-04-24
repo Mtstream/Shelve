@@ -8,6 +8,7 @@
 	"block.shelve.cheese_cake":"Cheese Cake",
 	"block.shelve.firecracker":"Fire Cracker",
 	"block.shelve.instant_tnt":"INT",
+	"block.shelve.mega_glow_berry":"Mega Glow Berry",
 	
 	"block.shelve.humidity_detector":"Humidity Detector",
 	"block.shelve.static_detector":"Static detector",
@@ -23,5 +24,8 @@
 	"item.shelve.marinide_ingot":"Marinide Ingot",
 	"item.shelve.amethyst_ball":"Amethyst Ball",
 	
-	"text.openbutnot.message":"Open, but not fully open"
+	"text.openbutnot.message":"Open, but not fully open",
+	
+	"advancements.husbandry.obtain_mega_glow_berry.title":"Edible Lantern",
+	"advancements.husbandry.obtain_mega_glow_berry.description":"Tastes shiny."
 }

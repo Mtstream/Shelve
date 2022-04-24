@@ -2,10 +2,8 @@ package com.mtstream.shelve.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -60,6 +58,7 @@ public class CheeseCakeBlock extends Block{
 			CollisionContext con) {
 		return shape(state.getValue(BITES));
 	}
+	@SuppressWarnings("deprecation")
 	public BlockState updateShape(BlockState state, Direction dir, BlockState state1, LevelAccessor lev, BlockPos pos, BlockPos pos1) {
 	    return dir == Direction.DOWN && !state.canSurvive(lev, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, dir, state1, lev, pos, pos1);
 	}

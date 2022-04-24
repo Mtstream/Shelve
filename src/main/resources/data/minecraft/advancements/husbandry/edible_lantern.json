@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:husbandry/root",
+  "display": {
+    "icon": {
+      "item": "shelve:mega_glow_berry"
+    },
+    "title": {
+      "translate": "advancements.husbandry.obtain_mega_glow_berry.title"
+    },
+    "description": {
+      "translate": "advancements.husbandry.obtain_mega_glow_berry.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "mega_glow_berry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shelve:mega_glow_berry"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mega_glow_berry"
+    ]
+  ]
+}

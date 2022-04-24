@@ -7,6 +7,7 @@
 	"block.shelve.crystal_ball":"水晶球",
 	"block.shelve.cheese_cake":"芝士蛋糕",
 	"block.shelve.firecracker":"爆竹",
+	"block.shelve.mega_glow_berry":"巨型发光浆果",
 	
 	"block.shelve.humidity_detector":"湿度探测器",
 	"block.shelve.static_detector":"静电探测器",
@@ -22,5 +23,8 @@
 	"item.shelve.marinide_ingot":"海晶金锭",
 	"item.shelve.amethyst_ball":"紫水晶球部件",
 	
-	"text.openbutnot.message":"打开了，但没完全打开"
+	"text.openbutnot.message":"打开了，但没完全打开",
+	
+	"advancements.husbandry.obtain_mega_glow_berry.title":"可食用灯笼",
+	"advancements.husbandry.obtain_mega_glow_berry.description":"尝起来有点发光"
 }
