@@ -15,7 +15,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class ClientEventBusSubcriber {
 	@SubscribeEvent
 	public static void clienSetup(FMLClientSetupEvent event) {
-		ItemBlockRenderTypes.setRenderLayer(BlockInit.WATER_CAGE.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.HARVESTER.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.CRYSTAL_BALL.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.MEGA_GLOW_BERRY.get(), RenderType.cutout());
