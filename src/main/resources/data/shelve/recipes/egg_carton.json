@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        " H "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:wheat"
+        },
+        "H": {
+            "item": "minecraft:hay_block"
+        }
+    },
+    "result": {
+        "item": "shelve:egg_carton",
+        "count": 2
+    }
+}

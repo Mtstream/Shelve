@@ -17,7 +17,6 @@ import com.mtstream.shelve.block.IgniterBlock;
 import com.mtstream.shelve.block.InstantTntBlock;
 import com.mtstream.shelve.block.MegaGlowBerryBlock;
 import com.mtstream.shelve.block.MilkCauldron;
-import com.mtstream.shelve.block.SoulJackOLantern;
 import com.mtstream.shelve.block.StaticDetectorBlock;
 import com.mtstream.shelve.block.TrashCanBlock;
 import com.mtstream.shelve.block.WaterCageBlock;
@@ -97,10 +96,6 @@ public class BlockInit {
 			() -> new MegaGlowBerryBlock(BlockBehaviour.Properties.copy(Blocks.MELON).dynamicShape().sound(SoundType.SWEET_BERRY_BUSH).lightLevel($ -> 14)
 					.strength(0.7f)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
-	public static final RegistryObject<Block> SOUL_JACK_O_LANTERN = register("soul_jack_o_lantern",
-			() -> new SoulJackOLantern(BlockBehaviour.Properties.copy(Blocks.PUMPKIN).dynamicShape().sound(SoundType.WOOD).lightLevel($ -> 12)
-					.strength(1.0f)),
-			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 	public static final RegistryObject<Block> CREEPSHROOM = register("creepshroom",
 			() -> new CreepshroomBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).dynamicShape().sound(SoundType.SWEET_BERRY_BUSH)
 					.instabreak()),

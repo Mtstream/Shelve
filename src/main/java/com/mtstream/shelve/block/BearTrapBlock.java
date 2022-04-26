@@ -3,11 +3,14 @@ package com.mtstream.shelve.block;
 import java.util.List;
 import java.util.Random;
 
+import com.mtstream.shelve.init.BlockInit;
 import com.mtstream.shelve.item.ItemShrinker;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -72,6 +75,15 @@ public class BearTrapBlock extends Block{
 			return InteractionResult.FAIL;
 		}
 	}
+	@Override
+	public void onRemove(BlockState state, Level lev, BlockPos pos, BlockState state1,
+			boolean bln) {
+		if(state.getValue(SPIKE)&&!state1.is(BlockInit.BEAR_TRAP.get())) {
+			if(!lev.isClientSide) {
+				Block.popResource(lev, pos, new ItemStack(Items.IRON_SWORD, 1));
+			}
+		}
+	}
 	public void updateState(Level lev,BlockState state,BlockPos pos) {
 		Boolean active = false;
 		List<? extends Entity> entityList = lev.getEntitiesOfClass(LivingEntity.class, TOUCH_AABB.move(pos));
@@ -83,7 +95,11 @@ public class BearTrapBlock extends Block{
 				}
 			}
 		}
-		lev.setBlockAndUpdate(pos, state.setValue(ACTIVED, active));
+		if(state.getValue(ACTIVED) != active) {
+			lev.setBlockAndUpdate(pos, state.setValue(ACTIVED, active));
+			lev.playSound(null, pos, active?SoundEvents.IRON_TRAPDOOR_CLOSE:SoundEvents.IRON_TRAPDOOR_OPEN
+					, SoundSource.BLOCKS, 1.0f, 1.0f);
+		}
 		if(active) {
 			lev.scheduleTick(new BlockPos(pos), this, 10);
 		}

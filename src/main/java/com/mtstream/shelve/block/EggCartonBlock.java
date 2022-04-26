@@ -89,6 +89,7 @@ public class EggCartonBlock extends HorizontalDirectionalBlock{
 			int resl = state.getValue(EGGS) + 1;
 			if(resl <= 6) {
 				if(!lev.isClientSide) {
+					lev.playSound(null, pos, SoundEvents.GRASS_PLACE, SoundSource.BLOCKS, 1.0f, 1.0f);
 					lev.setBlockAndUpdate(pos, state.setValue(EGGS, resl));
 					shr.ShrinkItem(pla, stack);
 					return InteractionResult.CONSUME;
@@ -102,6 +103,7 @@ public class EggCartonBlock extends HorizontalDirectionalBlock{
 			int resl = state.getValue(EGGS) - 1;
 			if(resl >= 0) {
 				if(!lev.isClientSide) {
+					lev.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1.0f, 1.0f);
 					lev.setBlockAndUpdate(pos, state.setValue(EGGS, resl));
 					return InteractionResult.CONSUME;
 				}else {
