@@ -3,7 +3,7 @@ package com.mtstream.shelve.block;
 import java.util.Random;
 
 import com.mtstream.shelve.init.BlockInit;
-import com.mtstream.shelve.item.ShrinkItemStack;
+import com.mtstream.shelve.item.ItemShrinker;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -83,7 +83,7 @@ public class EggCartonBlock extends HorizontalDirectionalBlock{
 	@Override
 	public InteractionResult use(BlockState state, Level lev, BlockPos pos, Player pla,
 			InteractionHand han, BlockHitResult res) {
-		ShrinkItemStack shr = new ShrinkItemStack();
+		ItemShrinker shr = new ItemShrinker();
 		ItemStack stack = pla.getItemInHand(han);
 		if(stack.is(Items.EGG)) {
 			int resl = state.getValue(EGGS) + 1;

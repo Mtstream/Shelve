@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.mtstream.shelve.init.ItemInit;
-import com.mtstream.shelve.item.ShrinkItemStack;
+import com.mtstream.shelve.item.ItemShrinker;
 import com.mtstream.shelve.loot.ShelveLootTable;
 
 import net.minecraft.server.level.ServerLevel;
@@ -31,7 +31,7 @@ public class MarineBoxItem extends Item{
 		Random random = new Random();
 		int randomEvent = random.nextInt(2);
 		ItemStack stack = pla.getItemInHand(han);
-		ShrinkItemStack shr = new ShrinkItemStack();
+		ItemShrinker shr = new ItemShrinker();
 	if(!lev.isClientSide()) {
 		shr.ShrinkItem(pla, stack);
 		if(pla.getInventory().getFreeSlot() >= 0){

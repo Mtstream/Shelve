@@ -3,6 +3,7 @@ package com.mtstream.shelve.init;
 import com.google.common.base.Function;
 import com.google.common.base.Supplier;
 import com.mtstream.shelve.Shelve;
+import com.mtstream.shelve.block.BearTrapBlock;
 import com.mtstream.shelve.block.ChannelerBlock;
 import com.mtstream.shelve.block.CheeseCakeBlock;
 import com.mtstream.shelve.block.ChimneyBlock;
@@ -116,6 +117,10 @@ public class BlockInit {
 			() -> new ChimneyBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).dynamicShape().sound(SoundType.STONE)
 					.requiresCorrectToolForDrops().strength(2.0F, 6.0F)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+	public static final RegistryObject<Block> BEAR_TRAP = register("bear_trap",
+			() -> new BearTrapBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).dynamicShape().sound(SoundType.LANTERN)
+					.requiresCorrectToolForDrops().strength(2.0F, 6.0F)),
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 	
 
 	private static <T extends Block> RegistryObject<T> registerBlock(final String name,final Supplier<? extends T> block){

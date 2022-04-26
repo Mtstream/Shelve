@@ -14,7 +14,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
 
 public class CreeperBudItem extends Item{
 
@@ -27,7 +26,6 @@ public class CreeperBudItem extends Item{
 		BlockPos pos = con.getClickedPos();
 		Direction dir = con.getClickedFace();
 		BlockPos relatedPos = pos.relative(dir);
-		BlockState state = lev.getBlockState(pos);
 		ItemStack stack = con.getItemInHand();
 			if(!lev.isClientSide) {
 				if(lev.getBlockState(relatedPos.below()).is(Blocks.MYCELIUM)) {

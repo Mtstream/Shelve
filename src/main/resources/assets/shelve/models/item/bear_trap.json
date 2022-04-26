@@ -1,6 +1,6 @@
 {
 	"parent":"item/generated",
 	"textures":{
-		"layer0":"shelve:item/amethyst_ball"
+		"layer0":"shelve:item/bear_trap_item"
 	}
 }

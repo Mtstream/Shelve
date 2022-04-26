@@ -4,7 +4,7 @@ package com.mtstream.shelve.block;
 import java.util.Random;
 
 import com.mtstream.shelve.init.ItemInit;
-import com.mtstream.shelve.item.ShrinkItemStack;
+import com.mtstream.shelve.item.ItemShrinker;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -43,7 +43,7 @@ public class MilkCauldron extends Block{
 	@Override
 	public InteractionResult use(BlockState state, Level lev, BlockPos pos, Player pla,
 			InteractionHand han, BlockHitResult res) {
-		ShrinkItemStack shr = new ShrinkItemStack();
+		ItemShrinker shr = new ItemShrinker();
 			if(!lev.isClientSide) {
 				switch(state.getValue(PROGRESS)) {
 				case 1:
