@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "minecraft:stone_bricks"
+    },
+    "result": "shelve:stone_bricks_chimney",
+    "count": 1
+}

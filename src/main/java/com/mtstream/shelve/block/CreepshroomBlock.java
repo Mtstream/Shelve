@@ -53,12 +53,13 @@ public class CreepshroomBlock extends CropBlock{
 	@Override
 	public InteractionResult use(BlockState state, Level lev, BlockPos pos, Player pla,
 			InteractionHand han, BlockHitResult res) {
+		Random ran = new Random();
 		ItemStack stack = pla.getItemInHand(han);
 		if(state.getValue(AGE)==7&&!stack.is(Items.BONE_MEAL)) {
 			if(!lev.isClientSide) {
 				lev.setBlockAndUpdate(pos, state.setValue(AGE, 3));
 				lev.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0f, 1.0f);
-				Block.popResource(lev, pos, new ItemStack(ItemInit.CREEPER_BUD.get(),1));
+				Block.popResource(lev, pos, new ItemStack(ItemInit.CREEPER_BUD.get(),ran.nextInt(2)+1));
 				return InteractionResult.CONSUME;
 			}else {
 				return InteractionResult.SUCCESS;
