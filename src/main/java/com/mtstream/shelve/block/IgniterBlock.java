@@ -54,7 +54,7 @@ public class IgniterBlock extends Block{
 					lev.setBlockAndUpdate(frontpos, Blocks.AIR.defaultBlockState());
 					lev.playSound(null, pos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 0.5f, 1.0f);
 				}
-				if(frontstate.getBlock().equals(Blocks.CAMPFIRE)||frontstate.getBlock().equals(Blocks.SOUL_CAMPFIRE)) {
+				if(frontstate.getBlock() instanceof CampfireBlock) {
 					lev.setBlockAndUpdate(frontpos,frontstate.setValue(CampfireBlock.LIT, false));
 					lev.playSound(null, pos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 0.5f, 1.0f);
 				}

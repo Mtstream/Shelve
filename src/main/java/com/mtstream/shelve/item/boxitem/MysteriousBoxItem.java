@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.List;
 
 import com.mtstream.shelve.init.ItemInit;
-import com.mtstream.shelve.item.ShrinkItemStack;
+import com.mtstream.shelve.item.ItemShrinker;
 import com.mtstream.shelve.loot.ShelveLootTable;
 
 import net.minecraft.Util;
@@ -37,7 +37,7 @@ public class MysteriousBoxItem extends Item{
 			Random random = new Random();
 			int randomEvent = random.nextInt(4);
 			ItemStack stack = pla.getItemInHand(han);
-			ShrinkItemStack shr = new ShrinkItemStack();
+			ItemShrinker shr = new ItemShrinker();
 		if(!lev.isClientSide()) {
 			if(randomEvent == 3||randomEvent == 4) {
 				shr.ShrinkItem(pla, stack);

@@ -1,0 +1,16 @@
+{
+	"variants":{
+		"full=false,top=false":{
+			"model":"shelve:block/bricks_chimney"
+		},
+		"full=true,top=false":{
+			"model":"shelve:block/bricks_chimney_full"
+		},
+		"full=false,top=true":{
+			"model":"shelve:block/bricks_chimney_top"
+		},
+		"full=true,top=true":{
+			"model":"shelve:block/bricks_chimney_full"
+		}
+	}
+}

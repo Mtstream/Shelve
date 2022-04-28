@@ -7,11 +7,18 @@
 	"block.shelve.crystal_ball":"水晶球",
 	"block.shelve.cheese_cake":"芝士蛋糕",
 	"block.shelve.firecracker":"爆竹",
+	"block.shelve.mega_glow_berry":"巨型发光浆果",
+	"block.shelve.egg_carton":"蛋托",
+	"block.shelve.bricks_chimney":"砖烟囱",
+	"block.shelve.stone_bricks_chimney":"石砖烟囱",
+	"block.shelve.soul_jack_o_lantern":"灵魂南瓜灯",
+	"block.shelve.bear_trap":"捕兽夹",
 	
 	"block.shelve.humidity_detector":"湿度探测器",
 	"block.shelve.static_detector":"静电探测器",
 	
 	"item.shelve.turf":"草皮",
+	"item.shelve.creeper_bud":"苦力怕囊",
 	
 	"item.shelve.empty_box":"空的箱子",
 	"item.shelve.mysterious_box":"神秘箱子",
@@ -22,5 +29,6 @@
 	"item.shelve.marinide_ingot":"海晶金锭",
 	"item.shelve.amethyst_ball":"紫水晶球部件",
 	
-	"text.openbutnot.message":"打开了，但没完全打开"
+	"advancements.husbandry.obtain_mega_glow_berry.title":"可食用灯笼",
+	"advancements.husbandry.obtain_mega_glow_berry.description":"尝起来有点发光"
 }

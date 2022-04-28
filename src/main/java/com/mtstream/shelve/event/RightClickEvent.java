@@ -35,6 +35,7 @@ public class RightClickEvent {
 				pla.setItemInHand(han, new ItemStack(Items.BUCKET));
 				lev.playSound(null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0f, 1.0f);
 				lev.setBlockAndUpdate(pos, BlockInit.MILK_CAULDRON.get().defaultBlockState());
+				
 			}
 		}
 		if(stack.getItem().equals(Items.SHEARS) && state.getBlock().equals(Blocks.GRASS_BLOCK)) {

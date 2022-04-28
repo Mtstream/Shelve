@@ -26,7 +26,7 @@ public class TurfItem extends Item{
 		Player pla = context.getPlayer();
 		InteractionHand han = context.getHand();
 		ItemStack stack = pla.getItemInHand(han);
-		ShrinkItemStack shr = new ShrinkItemStack();
+		ItemShrinker shr = new ItemShrinker();
 		
 		if(!lev.isClientSide()) {
 			if(sta.getBlock().equals(Blocks.DIRT)) {

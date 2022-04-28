@@ -1,7 +1,6 @@
 {
-	"replace":false,
-	"values":[
-		"shelve:water_cage",
+	"replace": false,
+	"values": [
 		"shelve:channeler",
 		"shelve:igniter",
 		"shelve:harvester",
@@ -9,6 +8,9 @@
 		"shelve:humidity_detector",
 		"shelve:static_detector",
 		"shelve:milk_cauldron",
-		"shelve:crystal_ball"
+		"shelve:bricks_chimney",
+		"shelve:stone_bricks_chimney",
+		"shelve:crystal_ball",
+		"shelve:bear_trap"
 	]
 }

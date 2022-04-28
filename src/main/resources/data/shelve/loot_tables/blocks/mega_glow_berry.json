@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "shelve:mega_glow_berry",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "shelve:mega_glow_berry",
+                  "properties": {
+                    "bites": "0"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

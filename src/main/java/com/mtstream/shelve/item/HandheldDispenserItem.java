@@ -33,7 +33,7 @@ public class HandheldDispenserItem extends Item{
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level lev, Player pla, InteractionHand han) {
 		ItemStack stack = pla.getItemInHand(han);
-		ShrinkItemStack shr = new ShrinkItemStack();
+		ItemShrinker shr = new ItemShrinker();
 		if(getAnotherHand(han, pla).equals(Items.ARROW)||getAnotherHand(han, pla).equals(Items.SPECTRAL_ARROW)||getAnotherHand(han, pla).equals(Items.TIPPED_ARROW)){
 			final ItemStack proInHand = ProjectileWeaponItem.getHeldProjectile(pla, st->st.getItem().equals(Items.ARROW));
 			if(!lev.isClientSide) {

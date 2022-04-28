@@ -8,11 +8,18 @@
 	"block.shelve.cheese_cake":"Cheese Cake",
 	"block.shelve.firecracker":"Fire Cracker",
 	"block.shelve.instant_tnt":"INT",
+	"block.shelve.mega_glow_berry":"Mega Glow Berry",
+	"block.shelve.egg_carton":"Egg Carton",
+	"block.shelve.bricks_chimney":"Brick Chimney",
+	"block.shelve.stone_bricks_chimney":"Stone Brick Chimney",
+	"block.shelve.soul_jack_o_lantern":"Soul Jack o'lantern",
+	"block.shelve.bear_trap":"Bear Trap",
 	
 	"block.shelve.humidity_detector":"Humidity Detector",
 	"block.shelve.static_detector":"Static detector",
 	
 	"item.shelve.turf":"Turf",
+	"item.shelve.creeper_bud":"Creeper Bud",
 	
 	"item.shelve.empty_box":"Empty Box",
 	"item.shelve.mysterious_box":"Mysterious Box",
@@ -23,5 +30,6 @@
 	"item.shelve.marinide_ingot":"Marinide Ingot",
 	"item.shelve.amethyst_ball":"Amethyst Ball",
 	
-	"text.openbutnot.message":"Open, but not fully open"
+	"advancements.husbandry.obtain_mega_glow_berry.title":"Edible Lantern",
+	"advancements.husbandry.obtain_mega_glow_berry.description":"Tastes shiny."
 }

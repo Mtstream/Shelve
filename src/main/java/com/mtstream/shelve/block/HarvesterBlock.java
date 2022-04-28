@@ -131,7 +131,13 @@ public class HarvesterBlock extends Block{
 				if(!prop.getName().equals(BlockStateProperties.AGE_1.getName())) {
 					continue;
 				}
-				lev.setBlock(pos, state.setValue((IntegerProperty)prop, 0), 2);
+				int max = prop.getPossibleValues().size()-1;
+				int age = state.getValue((IntegerProperty)prop);
+				if(age==max) {
+					lev.destroyBlock(pos, true);
+					lev.setBlock(pos, state.setValue((IntegerProperty)prop, 0), 2);
+				}
+				
 			}
 		}
 		if(state.getBlock() instanceof SugarCaneBlock) {

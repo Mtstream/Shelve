@@ -1,0 +1,16 @@
+{
+	"variants":{
+		"spike=false,actived=false":{
+			"model":"shelve:block/bear_trap_open"
+		},
+		"spike=true,actived=false":{
+			"model":"shelve:block/bear_trap_open_spike"
+		},
+		"spike=false,actived=true":{
+			"model":"shelve:block/bear_trap_actived"
+		},
+		"spike=true,actived=true":{
+			"model":"shelve:block/bear_trap_actived_spike"
+		}
+	}
+}

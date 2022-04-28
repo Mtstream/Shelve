@@ -1,0 +1,13 @@
+{
+	"variants":{
+		"bites=0":{
+			"model":"shelve:block/mega_glow_berry"
+		},
+		"bites=1":{
+			"model":"shelve:block/mega_glow_berry_1"
+		},
+		"bites=2":{
+			"model":"shelve:block/mega_glow_berry_2"
+		}
+	}
+}

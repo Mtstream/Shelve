@@ -1,0 +1,6 @@
+{
+  "parent": "shelve:block/template_chimney_top",
+  "textures": {
+    "texture": "minecraft:block/stone_bricks"
+  }
+}
