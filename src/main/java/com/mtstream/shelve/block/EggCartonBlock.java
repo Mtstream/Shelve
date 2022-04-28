@@ -105,6 +105,7 @@ public class EggCartonBlock extends HorizontalDirectionalBlock{
 				if(!lev.isClientSide) {
 					lev.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1.0f, 1.0f);
 					lev.setBlockAndUpdate(pos, state.setValue(EGGS, resl));
+					pla.addItem(new ItemStack(Items.EGG, 1));
 					return InteractionResult.CONSUME;
 				}else {
 					return InteractionResult.SUCCESS;

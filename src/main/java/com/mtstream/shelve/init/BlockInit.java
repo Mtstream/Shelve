@@ -4,6 +4,7 @@ import com.google.common.base.Function;
 import com.google.common.base.Supplier;
 import com.mtstream.shelve.Shelve;
 import com.mtstream.shelve.block.BearTrapBlock;
+import com.mtstream.shelve.block.BridgeBlock;
 import com.mtstream.shelve.block.ChannelerBlock;
 import com.mtstream.shelve.block.CheeseCakeBlock;
 import com.mtstream.shelve.block.ChimneyBlock;
@@ -65,7 +66,7 @@ public class BlockInit {
 			
 	public static final RegistryObject<Block> TRASH_CAN = register("trash_can",
 			() -> new TrashCanBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).dynamicShape().sound(SoundType.LANTERN)
-					.requiresCorrectToolForDrops().strength(2.0F, 6.0F)),
+					.strength(2.0F).requiresCorrectToolForDrops()),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 			
 	public static final RegistryObject<Block> MILK_CAULDRON = register("milk_cauldron",
@@ -120,6 +121,10 @@ public class BlockInit {
 			() -> new BearTrapBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS).dynamicShape().sound(SoundType.LANTERN)
 					.requiresCorrectToolForDrops().strength(2.0F, 6.0F)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+	public static final RegistryObject<Block> WOOD_PLANK_BRIDGE = register("wood_plank_bridge",
+			() -> new BridgeBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).dynamicShape().sound(SoundType.WOOD)
+					.requiresCorrectToolForDrops().strength(0.5F, 2.0F)),
+			object -> () -> new BlockItem(object.get(), new Item.Properties()));
 	
 
 	private static <T extends Block> RegistryObject<T> registerBlock(final String name,final Supplier<? extends T> block){

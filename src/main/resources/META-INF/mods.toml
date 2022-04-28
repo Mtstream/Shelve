@@ -4,7 +4,7 @@ license="MIT"
 #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" 
 [[mods]] 
 modId="shelve"
-version="0.1.0"
+version="0.1.1"
 displayName="Shelve" 
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional

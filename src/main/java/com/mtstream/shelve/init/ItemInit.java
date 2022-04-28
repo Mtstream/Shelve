@@ -37,6 +37,7 @@ public class ItemInit {
 	
 	
 	
+	
 	public static <T extends Item> RegistryObject<T> Register(final String name, final Supplier<T> item){
 		return ITEMS.register(name, item);
 		

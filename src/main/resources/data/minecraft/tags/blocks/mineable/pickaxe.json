@@ -1,7 +1,6 @@
 {
-	"replace":false,
-	"values":[
-		"shelve:water_cage",
+	"replace": false,
+	"values": [
 		"shelve:channeler",
 		"shelve:igniter",
 		"shelve:harvester",
