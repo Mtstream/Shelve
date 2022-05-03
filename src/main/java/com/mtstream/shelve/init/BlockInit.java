@@ -18,6 +18,8 @@ import com.mtstream.shelve.block.IgniterBlock;
 import com.mtstream.shelve.block.InstantTntBlock;
 import com.mtstream.shelve.block.MegaGlowBerryBlock;
 import com.mtstream.shelve.block.MilkCauldron;
+import com.mtstream.shelve.block.ResonatorBlock;
+import com.mtstream.shelve.block.RheostatBlock;
 import com.mtstream.shelve.block.StaticDetectorBlock;
 import com.mtstream.shelve.block.TrashCanBlock;
 
@@ -125,6 +127,14 @@ public class BlockInit {
 			() -> new BridgeBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).dynamicShape().sound(SoundType.WOOD)
 					.requiresCorrectToolForDrops().strength(0.5F, 2.0F)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties()));
+	public static final RegistryObject<Block> RESONATOR = register("resonator",
+			() -> new ResonatorBlock(BlockBehaviour.Properties.copy(Blocks.REPEATER).dynamicShape().sound(SoundType.WOOD)
+					.instabreak()),
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+	public static final RegistryObject<Block> RHEOSTAT = register("rheostat",
+			() -> new RheostatBlock(BlockBehaviour.Properties.copy(Blocks.COMPARATOR).dynamicShape().sound(SoundType.WOOD)
+					.instabreak()),
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
 	
 
 	private static <T extends Block> RegistryObject<T> registerBlock(final String name,final Supplier<? extends T> block){

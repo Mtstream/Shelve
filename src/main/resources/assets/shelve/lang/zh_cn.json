@@ -13,12 +13,15 @@
 	"block.shelve.stone_bricks_chimney":"石砖烟囱",
 	"block.shelve.soul_jack_o_lantern":"灵魂南瓜灯",
 	"block.shelve.bear_trap":"捕兽夹",
+	"block.shelve.resonator":"红石共振器",
+	"block.shelve.rheostat":"红石变阻器",
 	
 	"block.shelve.humidity_detector":"湿度探测器",
 	"block.shelve.static_detector":"静电探测器",
 	
 	"item.shelve.turf":"草皮",
 	"item.shelve.creeper_bud":"苦力怕囊",
+	"item.shelve.tuning_fork":"音叉",
 	
 	"item.shelve.empty_box":"空的箱子",
 	"item.shelve.mysterious_box":"神秘箱子",
@@ -30,5 +33,11 @@
 	"item.shelve.amethyst_ball":"紫水晶球部件",
 	
 	"advancements.husbandry.obtain_mega_glow_berry.title":"可食用灯笼",
-	"advancements.husbandry.obtain_mega_glow_berry.description":"尝起来有点发光"
+	"advancements.husbandry.obtain_mega_glow_berry.description":"尝起来有点发光",
+	
+	"item.shelve.tuning_fork.desc1":"-当在音符盒上使用时",
+	"item.shelve.tuning_fork.desc2":"复制/粘贴音符",
+	"item.shelve.tuning_fork.desc3":"-当在其他方块上使用时",
+	"item.shelve.tuning_fork.desc4":"切换模式"
+	
 }

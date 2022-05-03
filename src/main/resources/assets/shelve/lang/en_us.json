@@ -14,12 +14,15 @@
 	"block.shelve.stone_bricks_chimney":"Stone Brick Chimney",
 	"block.shelve.soul_jack_o_lantern":"Soul Jack o'lantern",
 	"block.shelve.bear_trap":"Bear Trap",
+	"block.shelve.resonator":"Resonator",
+	"block.shelve.rheostat":"Rheostat",
 	
 	"block.shelve.humidity_detector":"Humidity Detector",
 	"block.shelve.static_detector":"Static detector",
 	
 	"item.shelve.turf":"Turf",
 	"item.shelve.creeper_bud":"Creeper Bud",
+	"item.shelve.tuning_fork":"Tuning Fork",
 	
 	"item.shelve.empty_box":"Empty Box",
 	"item.shelve.mysterious_box":"Mysterious Box",
@@ -31,5 +34,10 @@
 	"item.shelve.amethyst_ball":"Amethyst Ball",
 	
 	"advancements.husbandry.obtain_mega_glow_berry.title":"Edible Lantern",
-	"advancements.husbandry.obtain_mega_glow_berry.description":"Tastes shiny."
+	"advancements.husbandry.obtain_mega_glow_berry.description":"Tastes shiny.",
+	
+	"item.shelve.tuning_fork.desc1":"-When used on a note block",
+	"item.shelve.tuning_fork.desc2":"Copy/paste note",
+	"item.shelve.tuning_fork.desc3":"-When used on other blocks",
+	"item.shelve.tuning_fork.desc4":"Toggle between coping and pasting mode"
 }
