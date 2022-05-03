@@ -1,0 +1,34 @@
+{
+	"variants":{
+		"facing=north,input=true":{
+			"model":"shelve:block/resonator_in"
+		},
+		"facing=north,input=false":{
+			"model":"shelve:block/resonator_out"
+		},
+		"facing=east,input=true":{
+			"model":"shelve:block/resonator_in",
+			"y":90
+		},
+		"facing=east,input=false":{
+			"model":"shelve:block/resonator_out",
+			"y":90
+		},
+		"facing=south,input=true":{
+			"model":"shelve:block/resonator_in",
+			"y":180
+		},
+		"facing=south,input=false":{
+			"model":"shelve:block/resonator_out",
+			"y":180
+		},
+		"facing=west,input=true":{
+			"model":"shelve:block/resonator_in",
+			"y":270
+		},
+		"facing=west,input=false":{
+			"model":"shelve:block/resonator_out",
+			"y":270
+		}
+	}
+}

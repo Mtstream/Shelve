@@ -20,5 +20,6 @@ public class ClientEventBusSubcriber {
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.MEGA_GLOW_BERRY.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.CREEPSHROOM.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.BEAR_TRAP.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.RHEOSTAT.get(), RenderType.cutout());
 	}
 }

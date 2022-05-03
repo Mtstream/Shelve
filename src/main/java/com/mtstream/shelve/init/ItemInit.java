@@ -5,6 +5,7 @@ import com.mtstream.shelve.Shelve;
 import com.mtstream.shelve.item.CreeperBudItem;
 import com.mtstream.shelve.item.HandheldDispenserItem;
 import com.mtstream.shelve.item.TransmutationMagnetItem;
+import com.mtstream.shelve.item.TuningForkItem;
 import com.mtstream.shelve.item.TurfItem;
 import com.mtstream.shelve.item.boxitem.InfernalBoxItem;
 import com.mtstream.shelve.item.boxitem.MarineBoxItem;
@@ -27,6 +28,7 @@ public class ItemInit {
 	
 	public static final RegistryObject<Item> CHEESE = Register("cheese", ()->new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(new FoodProperties.Builder().nutrition(5).saturationMod(4).build())));
 	public static final RegistryObject<Item> CREEPER_BUD = Register("creeper_bud", ()->new CreeperBudItem(new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+	public static final RegistryObject<Item> TUNING_FORK = Register("tuning_fork", ()->new TuningForkItem(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).stacksTo(1)));
 	//Unfinished
 	public static final RegistryObject<Item> TRANSMUTATION_MAGNET = Register("transmutation_magnet", ()->new TransmutationMagnetItem(new Item.Properties()));
 	
