@@ -14,8 +14,8 @@
 	"block.shelve.stone_bricks_chimney":"Stone Brick Chimney",
 	"block.shelve.soul_jack_o_lantern":"Soul Jack o'lantern",
 	"block.shelve.bear_trap":"Bear Trap",
-	"block.shelve.resonator":"Resonator",
-	"block.shelve.rheostat":"Rheostat",
+	"block.shelve.resonator":"Redstone Resonator",
+	"block.shelve.rheostat":"Redstone Rheostat",
 	
 	"block.shelve.humidity_detector":"Humidity Detector",
 	"block.shelve.static_detector":"Static detector",
@@ -36,8 +36,18 @@
 	"advancements.husbandry.obtain_mega_glow_berry.title":"Edible Lantern",
 	"advancements.husbandry.obtain_mega_glow_berry.description":"Tastes shiny.",
 	
+	"item.shelve.shift":"§ePress §6SHIFT §efor more information",
 	"item.shelve.tuning_fork.desc1":"-When used on a note block",
 	"item.shelve.tuning_fork.desc2":"Copy/paste note",
 	"item.shelve.tuning_fork.desc3":"-When used on other blocks",
-	"item.shelve.tuning_fork.desc4":"Toggle between coping and pasting mode"
+	"item.shelve.tuning_fork.desc4":"Toggle between coping and pasting mode",
+	"item.shelve.tuning_fork.desc5":"-Current note:",
+	"item.shelve.resonator.desc":"§bTransmit redstone signal via vibration",
+	"item.shelve.resonator.desc.shift":"§9-When a signal is received\n§7Emit a vibration\n§9-When a vibration is received\n§7Output signal\n§9-When right-clicked\n§7Switch mode",
+	"item.shelve.rheostat.desc":"§bAbates redstone signal",
+	"item.shelve.rheostat.desc.shift":"§9-When right-clicked \n§7Adjust resistance",
+	"item.shelve.channeler.desc":"§e-Absorb the energy from §4redstone block §eand §6glowstone §eat both ends to generate lightning, need to work under a lightning rod",
+	"item.shelve.igniter.desc":"§e-Set fire or light campfire when actived",
+	"item.shelve.instant_tnt.desc":"§cExplode immediately, obtained by using scissors on a TNT",
+	"item.shelve.harvester.desc":"§eharvest crops when actived"
 }

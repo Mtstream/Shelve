@@ -22,6 +22,7 @@ import com.mtstream.shelve.block.ResonatorBlock;
 import com.mtstream.shelve.block.RheostatBlock;
 import com.mtstream.shelve.block.StaticDetectorBlock;
 import com.mtstream.shelve.block.TrashCanBlock;
+import com.mtstream.shelve.item.blockItem.ToolTipBlockItem;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -44,17 +45,17 @@ public class BlockInit {
 	public static final RegistryObject<Block> CHANNELER = register("channeler",
 			() -> new ChannelerBlock(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).dynamicShape().sound(SoundType.COPPER)
 					.requiresCorrectToolForDrops().strength(2.0F, 6.0F)),
-			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), false));
 			
 	public static final RegistryObject<Block> IGNITER = register("igniter",
 			() -> new IgniterBlock(BlockBehaviour.Properties.copy(Blocks.BLACKSTONE).sound(SoundType.STONE)
 					.requiresCorrectToolForDrops().strength(1.5F, 5.0F)),
-			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), false));
 			
 	public static final RegistryObject<Block> HARVESTER = register("harvester",
 			() -> new HarvesterBlock(BlockBehaviour.Properties.copy(Blocks.PISTON).dynamicShape().sound(SoundType.STONE)
 					.requiresCorrectToolForDrops().strength(1.5F, 5.0F)),
-			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), false));
 			
 	public static final RegistryObject<Block> HUMIDITY_DETECTOR = register("humidity_detector",
 			() -> new HumidityDetectorBlock(BlockBehaviour.Properties.copy(Blocks.DAYLIGHT_DETECTOR).dynamicShape().sound(SoundType.STONE)
@@ -83,7 +84,7 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> INSTANT_TNT = register("instant_tnt",
 			() -> new InstantTntBlock(BlockBehaviour.Properties.of(Material.EXPLOSIVE).instabreak().sound(SoundType.GRASS)), 
-			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), false));
 	
 	public static final RegistryObject<Block> FIRECRACKER = register("firecracker",
 			() -> new FireCrackerBlock(BlockBehaviour.Properties.of(Material.EXPLOSIVE).instabreak().dynamicShape().sound(SoundType.GRASS)), 
@@ -130,11 +131,11 @@ public class BlockInit {
 	public static final RegistryObject<Block> RESONATOR = register("resonator",
 			() -> new ResonatorBlock(BlockBehaviour.Properties.copy(Blocks.REPEATER).dynamicShape().sound(SoundType.WOOD)
 					.instabreak()),
-			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), true));
 	public static final RegistryObject<Block> RHEOSTAT = register("rheostat",
 			() -> new RheostatBlock(BlockBehaviour.Properties.copy(Blocks.COMPARATOR).dynamicShape().sound(SoundType.WOOD)
 					.instabreak()),
-			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), true));
 	
 
 	private static <T extends Block> RegistryObject<T> registerBlock(final String name,final Supplier<? extends T> block){

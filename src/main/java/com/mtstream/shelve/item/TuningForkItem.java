@@ -31,6 +31,8 @@ public class TuningForkItem extends Item{
 		cpn.add(new TranslatableComponent("item.shelve.tuning_fork.desc2").withStyle(ChatFormatting.GRAY));
 		cpn.add(new TranslatableComponent("item.shelve.tuning_fork.desc3").withStyle(ChatFormatting.BLUE));
 		cpn.add(new TranslatableComponent("item.shelve.tuning_fork.desc4").withStyle(ChatFormatting.GRAY));
+		cpn.add(new TranslatableComponent("item.shelve.tuning_fork.desc5").withStyle(ChatFormatting.GOLD));
+		cpn.add(new TextComponent(stack.getTagElement("NoteTag") != null?this.getNote(stack.getTagElement("NoteTag").getInt("Note")):"Null").withStyle(ChatFormatting.GRAY));
 	}
 	public String getNote(int note) {
 		String[] notes = new String[] {"F#","G","G#","A","A#","B","C","C#","D","D#","E","F",

@@ -55,5 +55,8 @@ public class RheostatBlock extends DiodeBlock{
 	protected int getDelay(BlockState state) {
 		return 1;
 	}
-	
+	@Override
+	public boolean canConnectRedstone(BlockState state, BlockGetter lev, BlockPos pos, Direction dir) {
+		return dir == null?false:(dir.getAxis()==state.getValue(FACING).getAxis());
+	}
 }
