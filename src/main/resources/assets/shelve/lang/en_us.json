@@ -38,16 +38,16 @@
 	
 	"item.shelve.shift":"§ePress §6SHIFT §efor more information",
 	"item.shelve.tuning_fork.desc1":"-When used on a note block",
-	"item.shelve.tuning_fork.desc2":"Copy/paste note",
+	"item.shelve.tuning_fork.desc2":"Copies/pastes the note",
 	"item.shelve.tuning_fork.desc3":"-When used on other blocks",
-	"item.shelve.tuning_fork.desc4":"Toggle between coping and pasting mode",
+	"item.shelve.tuning_fork.desc4":"Toggles mode",
 	"item.shelve.tuning_fork.desc5":"-Current note:",
-	"item.shelve.resonator.desc":"§bTransmit redstone signal via vibration",
-	"item.shelve.resonator.desc.shift":"§9-When a signal is received\n§7Emit a vibration\n§9-When a vibration is received\n§7Output signal\n§9-When right-clicked\n§7Switch mode",
+	"item.shelve.resonator.desc":"§bTransmits redstone signals via vibration",
+	"item.shelve.resonator.desc.shift":"§9-When a signal is received\n§7Emits a vibration\n§9-When a vibration is received\n§7Outputs signal\n§9-When right-clicked\n§7Switch mode",
 	"item.shelve.rheostat.desc":"§bAbates redstone signal",
-	"item.shelve.rheostat.desc.shift":"§9-When right-clicked \n§7Adjust resistance",
-	"item.shelve.channeler.desc":"§e-Absorb the energy from §4redstone block §eand §6glowstone §eat both ends to generate lightning, need to work under a lightning rod",
-	"item.shelve.igniter.desc":"§e-Set fire or light campfire when actived",
-	"item.shelve.instant_tnt.desc":"§cExplode immediately, obtained by using scissors on a TNT",
-	"item.shelve.harvester.desc":"§eharvest crops when actived"
+	"item.shelve.rheostat.desc.shift":"§9-When right-clicked \n§7Adjusts resistance",
+	"item.shelve.channeler.desc":"§e-Absorbs the energy from §4redstone block §eand §6glowstone §eat both ends to generate lightning, needs to work under a lightning rod",
+	"item.shelve.igniter.desc":"§e-Sets fire or light campfire when actived",
+	"item.shelve.instant_tnt.desc":"§cExplodes immediately, obtained by using scissors on a TNT",
+	"item.shelve.harvester.desc":"§e-Harvests crops when actived"
 }

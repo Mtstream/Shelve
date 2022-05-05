@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "shelve:channeler",
+    "shelve:igniter",
+    "shelve:harvester",
+    "shelve:humidity_detector",
+    "shelve:static_detector",
+    "shelve:resonator",
+    "shelve:rheostat",
+    "shelve:bear_trap"
+  ]
+} 

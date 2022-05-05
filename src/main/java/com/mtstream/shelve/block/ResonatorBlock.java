@@ -157,8 +157,10 @@ public class ResonatorBlock extends HorizontalDirectionalBlock{
 		((ServerLevel)lev).sendVibrationParticle(new VibrationPath(pos, new BlockPositionSource(curPos), dis/2));
 		if(!lev.isClientSide) {
 			if(curState.getBlock() instanceof ResonatorBlock&&curState.getValue(INPUT)) {
-				lev.setBlockAndUpdate(curPos, curState.setValue(WAITFORACTIVE, pow));
-				lev.scheduleTick(curPos, curState.getBlock(), dis/2);
+				if(curState.getValue(FACING) == dir.getOpposite()) {
+					lev.setBlockAndUpdate(curPos, curState.setValue(WAITFORACTIVE, pow));
+					lev.scheduleTick(curPos, curState.getBlock(), dis/2);
+				}
 			}
 		}
 	}

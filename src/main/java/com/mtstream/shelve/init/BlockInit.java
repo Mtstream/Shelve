@@ -27,6 +27,7 @@ import com.mtstream.shelve.item.blockItem.ToolTipBlockItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.WaterLilyBlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -127,7 +128,7 @@ public class BlockInit {
 	public static final RegistryObject<Block> WOOD_PLANK_BRIDGE = register("wood_plank_bridge",
 			() -> new BridgeBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).dynamicShape().sound(SoundType.WOOD)
 					.requiresCorrectToolForDrops().strength(0.5F, 2.0F)),
-			object -> () -> new BlockItem(object.get(), new Item.Properties()));
+			object -> () -> new WaterLilyBlockItem(object.get(), new Item.Properties()));
 	public static final RegistryObject<Block> RESONATOR = register("resonator",
 			() -> new ResonatorBlock(BlockBehaviour.Properties.copy(Blocks.REPEATER).dynamicShape().sound(SoundType.WOOD)
 					.instabreak()),

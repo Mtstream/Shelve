@@ -38,8 +38,8 @@ public class WaterLoggableBlock extends Block implements SimpleWaterloggedBlock{
 	}
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		FluidState flate = context.getLevel().getFluidState(context.getClickedPos());
-		return this.defaultBlockState().setValue(WATERLOGGED, flate.is(FluidTags.WATER));
+		FluidState state = context.getLevel().getFluidState(context.getClickedPos());
+		return this.defaultBlockState().setValue(WATERLOGGED, state.is(FluidTags.WATER)&&state.isSource());
 	}
 	@Override
 	protected void createBlockStateDefinition(Builder<Block, BlockState> bui) {

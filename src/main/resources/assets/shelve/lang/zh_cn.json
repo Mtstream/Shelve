@@ -42,7 +42,7 @@
 	"item.shelve.tuning_fork.desc4":"切换模式",
 	"item.shelve.tuning_fork.desc5":"-目前音符：",
 	"item.shelve.resonator.desc":"§b通过振动传输信号",
-	"item.shelve.resonator.desc.shift":"§9-当接收到红石信号时\n§7发射一次振动\n§9-当接收到振动时\n§7输出信号\n§9-当被右击时\n§7切换信号",
+	"item.shelve.resonator.desc.shift":"§9-当接收到红石信号时\n§7发射一次振动\n§9-当接收到振动时\n§7输出信号\n§9-当被右击时\n§7切换模式",
 	"item.shelve.rheostat.desc":"§b减弱红石信号",
 	"item.shelve.rheostat.desc.shift":"§9-当被右击时 \n§7调整电阻",
 	"item.shelve.channeler.desc":"§e-吸收两端§4红石块§e和§6荧石§e的能量来产生闪电，需要在避雷针下运作",
