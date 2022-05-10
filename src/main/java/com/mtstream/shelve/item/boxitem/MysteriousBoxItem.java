@@ -4,8 +4,8 @@ import java.util.Random;
 import java.util.List;
 
 import com.mtstream.shelve.init.ItemInit;
-import com.mtstream.shelve.item.ItemShrinker;
 import com.mtstream.shelve.loot.ShelveLootTable;
+import com.mtstream.shelve.util.ItemShrinker;
 
 import net.minecraft.Util;
 import net.minecraft.network.chat.TranslatableComponent;

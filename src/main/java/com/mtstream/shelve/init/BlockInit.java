@@ -3,15 +3,19 @@ package com.mtstream.shelve.init;
 import com.google.common.base.Function;
 import com.google.common.base.Supplier;
 import com.mtstream.shelve.Shelve;
+import com.mtstream.shelve.block.BarChargerBlock;
 import com.mtstream.shelve.block.BearTrapBlock;
 import com.mtstream.shelve.block.BridgeBlock;
 import com.mtstream.shelve.block.ChannelerBlock;
 import com.mtstream.shelve.block.CheeseCakeBlock;
 import com.mtstream.shelve.block.ChimneyBlock;
+import com.mtstream.shelve.block.CopperBarBlock;
 import com.mtstream.shelve.block.CreepshroomBlock;
 import com.mtstream.shelve.block.CrystalBallBlock;
 import com.mtstream.shelve.block.EggCartonBlock;
 import com.mtstream.shelve.block.FireCrackerBlock;
+import com.mtstream.shelve.block.FlameThrowerBlock;
+import com.mtstream.shelve.block.FuriousObsidianBlock;
 import com.mtstream.shelve.block.HarvesterBlock;
 import com.mtstream.shelve.block.HumidityDetectorBlock;
 import com.mtstream.shelve.block.IgniterBlock;
@@ -47,9 +51,18 @@ public class BlockInit {
 			() -> new ChannelerBlock(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).dynamicShape().sound(SoundType.COPPER)
 					.requiresCorrectToolForDrops().strength(2.0F, 6.0F)),
 			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), false));
+	public static final RegistryObject<Block> BAR_CHARGRT = register("bar_charger",
+			() -> new BarChargerBlock(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).dynamicShape().sound(SoundType.COPPER)
+					.requiresCorrectToolForDrops().strength(2.0F, 6.0F)),
+			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), false));
 			
 	public static final RegistryObject<Block> IGNITER = register("igniter",
 			() -> new IgniterBlock(BlockBehaviour.Properties.copy(Blocks.BLACKSTONE).sound(SoundType.STONE)
+					.requiresCorrectToolForDrops().strength(1.5F, 5.0F)),
+			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), false));
+	
+	public static final RegistryObject<Block> FLAME_THROWER = register("flame_thrower",
+			() -> new FlameThrowerBlock(BlockBehaviour.Properties.copy(Blocks.BLACKSTONE).sound(SoundType.STONE)
 					.requiresCorrectToolForDrops().strength(1.5F, 5.0F)),
 			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), false));
 			
@@ -137,6 +150,14 @@ public class BlockInit {
 			() -> new RheostatBlock(BlockBehaviour.Properties.copy(Blocks.COMPARATOR).dynamicShape().sound(SoundType.WOOD)
 					.instabreak()),
 			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), true));
+	public static final RegistryObject<Block> COPPER_BARS = register("copper_bars",
+			() -> new CopperBarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BARS).dynamicShape().sound(SoundType.COPPER)
+					.requiresCorrectToolForDrops().strength(5.0F, 6.0F)),
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+	public static final RegistryObject<Block> FURIOUS_OBSIDIAN = register("furious_obsidian",
+			() -> new FuriousObsidianBlock(BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN).dynamicShape().sound(SoundType.STONE)
+					.requiresCorrectToolForDrops().strength(50.0F, 1200.0F)),
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 	
 
 	private static <T extends Block> RegistryObject<T> registerBlock(final String name,final Supplier<? extends T> block){

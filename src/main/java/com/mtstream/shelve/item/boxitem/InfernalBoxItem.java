@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Random;
 
 import com.mtstream.shelve.init.ItemInit;
-import com.mtstream.shelve.item.ItemShrinker;
 import com.mtstream.shelve.loot.ShelveLootTable;
+import com.mtstream.shelve.util.ItemShrinker;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;

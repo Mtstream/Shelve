@@ -49,5 +49,7 @@
 	"item.shelve.channeler.desc":"§e-Absorbs the energy from §4redstone block §eand §6glowstone §eat both ends to generate lightning, needs to work under a lightning rod",
 	"item.shelve.igniter.desc":"§e-Sets fire or light campfire when actived",
 	"item.shelve.instant_tnt.desc":"§cExplodes immediately, obtained by using scissors on a TNT",
-	"item.shelve.harvester.desc":"§e-Harvests crops when actived"
+	"item.shelve.harvester.desc":"§e-Harvests crops when actived",
+	
+	"death.attack.elec_shock":"%1$s died of electrocution"
 }

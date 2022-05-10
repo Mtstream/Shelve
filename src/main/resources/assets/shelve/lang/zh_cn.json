@@ -48,5 +48,7 @@
 	"item.shelve.channeler.desc":"§e-吸收两端§4红石块§e和§6荧石§e的能量来产生闪电，需要在避雷针下运作",
 	"item.shelve.igniter.desc":"§e-当被激活时，产生火焰或点燃营火",
 	"item.shelve.instant_tnt.desc":"§c瞬间爆炸，对TNT使用剪刀获得",
-	"item.shelve.harvester.desc":"§e当被激活时，收割作物"
+	"item.shelve.harvester.desc":"§e当被激活时，收割作物",
+	
+	"death.attack.elec_shock":"%1$s触电身亡"
 }

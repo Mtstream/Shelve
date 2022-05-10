@@ -4,7 +4,7 @@ package com.mtstream.shelve.block;
 import java.util.Random;
 
 import com.mtstream.shelve.init.ItemInit;
-import com.mtstream.shelve.item.ItemShrinker;
+import com.mtstream.shelve.util.ItemShrinker;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
