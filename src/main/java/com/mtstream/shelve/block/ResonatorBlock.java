@@ -21,6 +21,8 @@ import net.minecraft.world.level.block.state.StateDefinition.Builder;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.gameevent.BlockPositionSource;
+import net.minecraft.world.level.gameevent.vibrations.VibrationPath;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -30,6 +32,7 @@ public class ResonatorBlock extends HorizontalDirectionalBlock{
 	public static final VoxelShape AABB = Shapes.box(0, 0, 0, 1, 0.125, 1);
 	public static final IntegerProperty POWER = BlockStateProperties.POWER;
 	public static final BooleanProperty INPUT = BooleanProperty.create("input");
+	public static final IntegerProperty WAITFORACTIVE = IntegerProperty.create("wait_for_active",0,15);
 	@Override
 	public VoxelShape getShape(BlockState p_60555_, BlockGetter p_60556_, BlockPos p_60557_,
 			CollisionContext p_60558_) {
@@ -37,11 +40,11 @@ public class ResonatorBlock extends HorizontalDirectionalBlock{
 	}
 	public ResonatorBlock(Properties prop) {
 		super(prop);
-		this.registerDefaultState(this.stateDefinition.any().setValue(POWER, 0).setValue(INPUT, false).setValue(FACING, Direction.NORTH));
+		this.registerDefaultState(this.stateDefinition.any().setValue(POWER, 0).setValue(INPUT, false).setValue(FACING, Direction.NORTH).setValue(WAITFORACTIVE, 0));
 	}
 	@Override
 	protected void createBlockStateDefinition(Builder<Block, BlockState> builder) {
-		builder.add(POWER,INPUT,FACING);
+		builder.add(POWER,INPUT,FACING,WAITFORACTIVE);
 	}
 	@Override
 	public void tick(BlockState state, ServerLevel lev, BlockPos pos, Random ran) {
@@ -49,7 +52,13 @@ public class ResonatorBlock extends HorizontalDirectionalBlock{
 			updateState(lev, state, pos);
 		}
 		if(state.getValue(INPUT)) {
-			lev.setBlockAndUpdate(pos, state.setValue(POWER, 0));
+			int waitPower = state.getValue(WAITFORACTIVE);
+			if(state.getValue(WAITFORACTIVE)>0) {
+				lev.setBlockAndUpdate(pos, state.setValue(WAITFORACTIVE, 0).setValue(POWER, waitPower));
+				updateState(lev, state, pos);
+			}else {
+				lev.setBlockAndUpdate(pos, state.setValue(POWER, 0));
+			}
 		}
 	}
 	@Override
@@ -82,7 +91,7 @@ public class ResonatorBlock extends HorizontalDirectionalBlock{
 	}
 	@Override
 	public int getSignal(BlockState state, BlockGetter get, BlockPos pos, Direction dir) {
-		return state.getValue(INPUT)&&dir==state.getValue(FACING)?state.getValue(POWER) : 0;
+		return state.getValue(INPUT)?state.getValue(POWER):0;
 	}
 	public void updateState(Level lev,BlockState state,BlockPos pos) {
 		int pow = lev.getBestNeighborSignal(pos);
@@ -131,21 +140,32 @@ public class ResonatorBlock extends HorizontalDirectionalBlock{
 		}
 	}
 	public void emit(Level lev,BlockPos pos,BlockState state,int pow) {
-		lev.playSound(null, pos, SoundEvents.BELL_RESONATE, SoundSource.BLOCKS, 1.0f, ((float)pow/10)+0.5f);
+		lev.playSound(null, pos, SoundEvents.BELL_RESONATE, SoundSource.BLOCKS, 1.0f, ((float)pow/5));
 		Direction dir = state.getValue(FACING);
 		BlockPos curPos = pos.relative(dir);
 		BlockState curState = lev.getBlockState(curPos);
+		int dis = 0;
 		for(int i = 0;i < 30;i++) {
 			lev.addAlwaysVisibleParticle(ParticleTypes.NOTE, curPos.getX()+0.5f, curPos.getY()+0.5f, curPos.getZ()+0.5, 0, 1.0f, 0);
-			if(!lev.isEmptyBlock(curPos)&&!curState.getCollisionShape(lev, curPos).isEmpty())break;
+			if(!lev.isEmptyBlock(curPos)&&!curState.getCollisionShape(lev, curPos).isEmpty()) {
+				break;
+			}
 			curPos = pos.relative(dir, i+1);
 			curState = lev.getBlockState(curPos);
+			dis = i+1;
 		}
+		((ServerLevel)lev).sendVibrationParticle(new VibrationPath(pos, new BlockPositionSource(curPos), dis/2));
 		if(!lev.isClientSide) {
 			if(curState.getBlock() instanceof ResonatorBlock&&curState.getValue(INPUT)) {
-				lev.setBlockAndUpdate(curPos, curState.setValue(POWER, pow));
-				lev.scheduleTick(curPos, curState.getBlock(), 20);
+				if(curState.getValue(FACING) == dir.getOpposite()) {
+					lev.setBlockAndUpdate(curPos, curState.setValue(WAITFORACTIVE, pow));
+					lev.scheduleTick(curPos, curState.getBlock(), dis/2);
+				}
 			}
 		}
+	}
+	@Override
+	public boolean canConnectRedstone(BlockState state, BlockGetter lev, BlockPos pos, Direction dir) {
+		return dir.getOpposite() != state.getValue(FACING);
 	}
 }

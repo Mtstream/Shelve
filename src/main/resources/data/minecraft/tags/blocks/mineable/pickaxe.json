@@ -11,6 +11,9 @@
 		"shelve:bricks_chimney",
 		"shelve:stone_bricks_chimney",
 		"shelve:crystal_ball",
-		"shelve:bear_trap"
+		"shelve:bear_trap",
+		"shelve:copper_bars",
+		"shelve:bar_charger",
+		"shelve:furious_obsidian"
 	]
 }

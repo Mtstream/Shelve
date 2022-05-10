@@ -1,5 +1,8 @@
 package com.mtstream.shelve.item;
 
+
+import com.mtstream.shelve.util.ItemShrinker;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

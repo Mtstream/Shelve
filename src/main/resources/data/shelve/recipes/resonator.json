@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# R",
+        "SSS"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:redstone"
+        },
+        "R": {
+            "item": "shelve:tuning_fork"
+        },
+        "S": {
+            "item": "minecraft:stone"
+        }
+    },
+    "result": {
+        "item": "shelve:resonator",
+        "count": 1
+    }
+}

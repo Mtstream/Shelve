@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.SoulFireBlock;
+import net.minecraft.world.level.block.TntBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition.Builder;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -74,6 +75,10 @@ public class IgniterBlock extends Block{
 			}
 			if(frontstate.getBlock().equals(Blocks.CAMPFIRE)||frontstate.getBlock().equals(Blocks.SOUL_CAMPFIRE)) {
 				lev.setBlockAndUpdate(frontpos,frontstate.setValue(CampfireBlock.LIT, true));
+			}
+			if(frontstate.getBlock() instanceof TntBlock tnt) {
+				tnt.onCaughtFire(frontstate, lev, frontpos, null, null);
+				lev.removeBlock(frontpos, false);
 			}
 			} else {
 				

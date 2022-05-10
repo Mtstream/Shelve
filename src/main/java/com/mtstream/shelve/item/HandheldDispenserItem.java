@@ -1,5 +1,7 @@
 package com.mtstream.shelve.item;
 
+import com.mtstream.shelve.util.ItemShrinker;
+
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;

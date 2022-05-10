@@ -35,9 +35,20 @@
 	"advancements.husbandry.obtain_mega_glow_berry.title":"可食用灯笼",
 	"advancements.husbandry.obtain_mega_glow_berry.description":"尝起来有点发光",
 	
+	"item.shelve.shift":"§e按下 §6SHIFT §e查看更多信息",
 	"item.shelve.tuning_fork.desc1":"-当在音符盒上使用时",
 	"item.shelve.tuning_fork.desc2":"复制/粘贴音符",
 	"item.shelve.tuning_fork.desc3":"-当在其他方块上使用时",
-	"item.shelve.tuning_fork.desc4":"切换模式"
+	"item.shelve.tuning_fork.desc4":"切换模式",
+	"item.shelve.tuning_fork.desc5":"-目前音符：",
+	"item.shelve.resonator.desc":"§b通过振动传输信号",
+	"item.shelve.resonator.desc.shift":"§9-当接收到红石信号时\n§7发射一次振动\n§9-当接收到振动时\n§7输出信号\n§9-当被右击时\n§7切换模式",
+	"item.shelve.rheostat.desc":"§b减弱红石信号",
+	"item.shelve.rheostat.desc.shift":"§9-当被右击时 \n§7调整电阻",
+	"item.shelve.channeler.desc":"§e-吸收两端§4红石块§e和§6荧石§e的能量来产生闪电，需要在避雷针下运作",
+	"item.shelve.igniter.desc":"§e-当被激活时，产生火焰或点燃营火",
+	"item.shelve.instant_tnt.desc":"§c瞬间爆炸，对TNT使用剪刀获得",
+	"item.shelve.harvester.desc":"§e当被激活时，收割作物",
 	
+	"death.attack.elec_shock":"%1$s触电身亡"
 }

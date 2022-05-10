@@ -6,6 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EntityType;
@@ -19,21 +20,21 @@ import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition.Builder;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public class ChannelerBlock extends Block{
 	
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-	public static final BooleanProperty ENABLED = BooleanProperty.create("enable");
+	public static final IntegerProperty CHARGE = IntegerProperty.create("charge", 0, 3);
 	
 	public ChannelerBlock(Properties properties) {
 		super(properties);
-		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(ENABLED, Boolean.valueOf(false)));
+		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(CHARGE, 0));
 	}
 	@Override
 	protected void createBlockStateDefinition(Builder<Block, BlockState> builder) {
-		builder.add(FACING,ENABLED);
+		builder.add(FACING,CHARGE);
 	}
 	public BlockState rotate(BlockState p_54125_, Rotation p_54126_) {
 	      return p_54125_.setValue(FACING, p_54126_.rotate(p_54125_.getValue(FACING)));
@@ -61,7 +62,7 @@ public class ChannelerBlock extends Block{
 	               double d0 = direction.getStepX() == 0 ? ran.nextDouble() : 0.5D + (double)direction.getStepX() * 0.6D;
 	               double d1 = direction.getStepY() == 0 ? ran.nextDouble() : 0.5D + (double)direction.getStepY() * 0.6D;
 	               double d2 = direction.getStepZ() == 0 ? ran.nextDouble() : 0.5D + (double)direction.getStepZ() * 0.6D;
-	               if(state.getValue(ENABLED)) {
+	               if(state.getValue(CHARGE)>=3) {
 	            	   lev.addParticle(ParticleTypes.ELECTRIC_SPARK, (double)pos.getX() + d0, (double)pos.getY() + d1, (double)pos.getZ() + d2, 0.0D, 0.0D, 0.0D);
 	               }
 	            }
@@ -69,23 +70,36 @@ public class ChannelerBlock extends Block{
 	      }
 	}
 	@Override
+	public int getAnalogOutputSignal(BlockState state, Level lev, BlockPos pos) {
+		return state.getValue(CHARGE)*5;
+	}
+	@Override
+	public void tick(BlockState state, ServerLevel lev, BlockPos pos, Random ran) {
+		BlockPos leftpos = pos.relative(state.getValue(FACING).getCounterClockWise(Axis.Y));
+		BlockPos rightpos = pos.relative(state.getValue(FACING).getClockWise(Axis.Y));
+		boolean canCharge = lev.getBlockState(leftpos).is(Blocks.REDSTONE_BLOCK) && lev.getBlockState(rightpos).is(Blocks.GLOWSTONE);
+		if(canCharge&&state.getValue(CHARGE)<3&&lev.getBlockState(pos.above()).is(Blocks.LIGHTNING_ROD)) {
+			lev.setBlock(pos, state.setValue(CHARGE, state.getValue(CHARGE)+1), 2);
+			lev.playSound(null, pos, SoundEvents.RESPAWN_ANCHOR_CHARGE, SoundSource.BLOCKS, 0.7f, state.getValue(CHARGE));
+		}
+		this.updateState(lev, pos, state);
+	}
+	public void updateState(Level lev,BlockPos pos,BlockState state) {
+		BlockPos leftpos = pos.relative(state.getValue(FACING).getCounterClockWise(Axis.Y));
+		BlockPos rightpos = pos.relative(state.getValue(FACING).getClockWise(Axis.Y));
+		boolean canStrike = !lev.getBlockState(leftpos).is(Blocks.REDSTONE_BLOCK) && !lev.getBlockState(rightpos).is(Blocks.GLOWSTONE);
+		if(state.getValue(CHARGE)<3) {
+			lev.scheduleTick(pos, this, 20);
+		}else if(state.getValue(CHARGE)>=3 && canStrike&&lev.getBlockState(pos.above()).is(Blocks.LIGHTNING_ROD)){
+			this.strike(lev, pos.above(), state);
+			lev.setBlockAndUpdate(pos, state.setValue(CHARGE, 0));
+		}
+	}
+	@Override
 	public void neighborChanged(BlockState state, Level lev, BlockPos pos, Block blo,
 			BlockPos p_60513_, boolean p_60514_) {
 		if(!lev.isClientSide) {
-			BlockPos leftpos = pos.relative(state.getValue(FACING).getCounterClockWise(Axis.Y));
-			BlockPos rightpos = pos.relative(state.getValue(FACING).getClockWise(Axis.Y));
-			if(lev.getBlockState(pos.above()).equals(Blocks.LIGHTNING_ROD.defaultBlockState())) {
-				if(lev.getBlockState(leftpos).equals(Blocks.REDSTONE_BLOCK.defaultBlockState()) && 
-						lev.getBlockState(rightpos).equals(Blocks.GLOWSTONE.defaultBlockState()) && !state.getValue(ENABLED)) {
-					lev.setBlock(pos, state.setValue(ENABLED, true), 2);
-					lev.playSound(null, pos, SoundEvents.RESPAWN_ANCHOR_CHARGE, SoundSource.BLOCKS, 0.7f, 1.0f);
-				}
-				if(!lev.getBlockState(leftpos).equals(Blocks.REDSTONE_BLOCK.defaultBlockState()) && 
-						!lev.getBlockState(rightpos).equals(Blocks.GLOWSTONE.defaultBlockState()) && state.getValue(ENABLED)) {
-					lev.setBlock(pos, state.setValue(ENABLED, false), 2);
-					strike(lev, pos.above(), state);
-				}
-			}
+			this.updateState(lev, pos, state);
 		}
 	}
 	@Override
