@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "cSc",
+        "GFR",
+        "cSc"
+    ],
+    "key": {
+        "c": {
+            "item": "minecraft:copper_ingot"
+        },
+        "S": {
+            "item": "shelve:copper_bars"
+        },
+        "G": {
+            "item": "minecraft:glowstone"
+        },
+        "F": {
+            "item": "shelve:marinide_ingot"
+        },
+        "R": {
+            "item": "minecraft:redstone_block"
+        }
+    },
+    "result": {
+        "item": "shelve:bar_charger",
+        "count": 1
+    }
+}

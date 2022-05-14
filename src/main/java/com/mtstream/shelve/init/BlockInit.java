@@ -24,6 +24,7 @@ import com.mtstream.shelve.block.MegaGlowBerryBlock;
 import com.mtstream.shelve.block.MilkCauldron;
 import com.mtstream.shelve.block.ResonatorBlock;
 import com.mtstream.shelve.block.RheostatBlock;
+import com.mtstream.shelve.block.ShearerBlock;
 import com.mtstream.shelve.block.StaticDetectorBlock;
 import com.mtstream.shelve.block.TrashCanBlock;
 import com.mtstream.shelve.item.blockItem.ToolTipBlockItem;
@@ -70,7 +71,12 @@ public class BlockInit {
 			() -> new HarvesterBlock(BlockBehaviour.Properties.copy(Blocks.PISTON).dynamicShape().sound(SoundType.STONE)
 					.requiresCorrectToolForDrops().strength(1.5F, 5.0F)),
 			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), false));
-			
+	
+	public static final RegistryObject<Block> SHEARER = register("entity_shearer",
+			() -> new ShearerBlock(BlockBehaviour.Properties.copy(Blocks.PISTON).dynamicShape().sound(SoundType.STONE)
+					.requiresCorrectToolForDrops().strength(1.5F, 5.0F)),
+			object -> () -> new ToolTipBlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE), false));
+	
 	public static final RegistryObject<Block> HUMIDITY_DETECTOR = register("humidity_detector",
 			() -> new HumidityDetectorBlock(BlockBehaviour.Properties.copy(Blocks.DAYLIGHT_DETECTOR).dynamicShape().sound(SoundType.STONE)
 					.strength(1.5f)),
@@ -92,7 +98,7 @@ public class BlockInit {
 			object -> () -> new BlockItem(object.get(), new Item.Properties()));
 	
 	public static final RegistryObject<Block> CRYSTAL_BALL = register("crystal_ball",
-			() -> new CrystalBallBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).dynamicShape().sound(SoundType.AMETHYST).lightLevel($->12)
+			() -> new CrystalBallBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).dynamicShape().sound(SoundType.AMETHYST)
 					.strength(1.5f)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 	
@@ -110,7 +116,7 @@ public class BlockInit {
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
 	
 	public static final RegistryObject<Block> MEGA_GLOW_BERRY = register("mega_glow_berry",
-			() -> new MegaGlowBerryBlock(BlockBehaviour.Properties.copy(Blocks.MELON).dynamicShape().sound(SoundType.SWEET_BERRY_BUSH).lightLevel($ -> 14)
+			() -> new MegaGlowBerryBlock(BlockBehaviour.Properties.copy(Blocks.MELON).dynamicShape().sound(SoundType.SWEET_BERRY_BUSH).lightLevel($->14)
 					.strength(0.7f)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
 	
@@ -153,12 +159,20 @@ public class BlockInit {
 	public static final RegistryObject<Block> COPPER_BARS = register("copper_bars",
 			() -> new CopperBarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BARS).dynamicShape().sound(SoundType.COPPER)
 					.requiresCorrectToolForDrops().strength(5.0F, 6.0F)),
-			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+	
 	public static final RegistryObject<Block> FURIOUS_OBSIDIAN = register("furious_obsidian",
 			() -> new FuriousObsidianBlock(BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN).dynamicShape().sound(SoundType.STONE)
 					.requiresCorrectToolForDrops().strength(50.0F, 1200.0F)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 	
+	
+	
+	
+	
+	public static final RegistryObject<Block> V = register("v",
+			() -> new com.mtstream.shelve.block.V(BlockBehaviour.Properties.of(Material.AIR)),
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
 
 	private static <T extends Block> RegistryObject<T> registerBlock(final String name,final Supplier<? extends T> block){
 		return BLOCKS.register(name, block);

@@ -12,10 +12,14 @@
 	"block.shelve.egg_carton":"Egg Carton",
 	"block.shelve.bricks_chimney":"Brick Chimney",
 	"block.shelve.stone_bricks_chimney":"Stone Brick Chimney",
-	"block.shelve.soul_jack_o_lantern":"Soul Jack o'lantern",
+	"block.shelve.furious_obsidian":"Furious Obsidian",
 	"block.shelve.bear_trap":"Bear Trap",
 	"block.shelve.resonator":"Redstone Resonator",
 	"block.shelve.rheostat":"Redstone Rheostat",
+	"block.shelve.copper_bars":"Copper Bars",
+	"block.shelve.entity_shearer":"Entity Shearer",
+	"block.shelve.flame_thrower":"Flame Thrower",
+	"block.shelve.bar_charger":"Bar Charger",
 	
 	"block.shelve.humidity_detector":"Humidity Detector",
 	"block.shelve.static_detector":"Static detector",
@@ -47,9 +51,12 @@
 	"item.shelve.rheostat.desc":"§bAbates redstone signal",
 	"item.shelve.rheostat.desc.shift":"§9-When right-clicked \n§7Adjusts resistance",
 	"item.shelve.channeler.desc":"§e-Absorbs the energy from §4redstone block §eand §6glowstone §eat both ends to generate lightning, needs to work under a lightning rod",
-	"item.shelve.igniter.desc":"§e-Sets fire or light campfire when actived",
-	"item.shelve.instant_tnt.desc":"§cExplodes immediately, obtained by using scissors on a TNT",
+	"item.shelve.igniter.desc":"§e-Sets fire or light campfire when activated",
+	"item.shelve.instant_tnt.desc":"§c-Explodes immediately, obtained by using scissors on a TNT",
 	"item.shelve.harvester.desc":"§e-Harvests crops when actived",
+	"item.shelve.flame_thrower.desc":"§e-Shoots a fireball when actived, takes 6s to charge",
+	"item.shelve.bar_charger.desc":"§e-Absorbs the energy from §4redstone block §eand §6glowstone §eat both ends to electrify the copper bars",
+	"item.shelve.entity_shearer.desc":"§e-Shears animals that run into the saw when activated",
 	
 	"death.attack.elec_shock":"%1$s died of electrocution"
 }

@@ -105,12 +105,18 @@ public class FlameThrowerBlock extends Block{
 		}
 	}
 	public void shoot(Level lev,BlockPos pos,BlockState state) {
+		Random ran = new Random();
 		BlockPos pos1 = pos.relative(state.getValue(FACING));
 		SmallFireball sfb = EntityType.SMALL_FIREBALL.create(lev);
 		sfb.setPos(pos1.getX()+0.5, pos1.getY()+0.5, pos1.getZ()+0.5);
-		sfb.xPower = (double)FacingTransformaer.FacingToPosRelativeX(state)/2.0d;
+		sfb.xPower = (double)FacingTransformaer.FacingToPosRelativeX(state)/4.0d;
 		sfb.yPower = 0;
-		sfb.zPower = (double)FacingTransformaer.FacingToPosRelativeZ(state)/2.0d;
-		lev.addFreshEntity(sfb);
+		sfb.zPower = (double)FacingTransformaer.FacingToPosRelativeZ(state)/4.0d;
+		if(!lev.isClientSide)lev.addFreshEntity(sfb);
+		for(int i=0;i<10;i++) {
+			lev.addParticle(ParticleTypes.FLAME, 
+					pos.getX()+0.5+(double)FacingTransformaer.FacingToPosRelativeX(state), pos.getY()+0.5, 
+					pos.getZ()+0.5+(double)FacingTransformaer.FacingToPosRelativeZ(state), FacingTransformaer.FacingToPosRelativeX(state)+ran.nextDouble()-0.5, ran.nextDouble()-0.5, FacingTransformaer.FacingToPosRelativeZ(state)+ran.nextDouble()-0.5);
+		}
 	}
 }

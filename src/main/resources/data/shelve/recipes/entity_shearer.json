@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "SRS",
+        " U "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:shears"
+        },
+        "S": {
+            "item": "minecraft:stripped_spruce_wood"
+        },
+        "R": {
+            "item": "minecraft:smooth_stone"
+        },
+        "U": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "item": "shelve:entity_shearer",
+        "count": 1
+    }
+}

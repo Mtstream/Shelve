@@ -1,0 +1,80 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"4": "shelve:block/slaughterer_top",
+		"5": "shelve:block/harvester_side",
+		"6": "shelve:block/harvester_side_2",
+		"7": "shelve:block/harvester_bottom",
+		"8": "shelve:block/slaughterer_saw_off",
+		"particle": "shelve:block/slaughterer_top"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 2],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"east": {"uv": [0, 2, 16, 16], "rotation": 90, "texture": "#6"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#7"},
+				"west": {"uv": [0, 16, 16, 2], "rotation": 90, "texture": "#6"},
+				"up": {"uv": [0, 16, 16, 2], "rotation": 180, "texture": "#5"},
+				"down": {"uv": [0, 2, 16, 16], "rotation": 180, "texture": "#5"}
+			}
+		},
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 0],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#8"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#8"}
+			}
+		},
+		{
+			"from": [7, 7, 0],
+			"to": [9, 9, 2],
+			"faces": {
+				"north": {"uv": [7, 7, 9, 9], "texture": "#8"},
+				"east": {"uv": [7, 2, 9, 4], "texture": "#5"},
+				"south": {"uv": [7, 2, 9, 4], "texture": "#5"},
+				"west": {"uv": [7, 2, 9, 4], "texture": "#5"},
+				"up": {"uv": [7, 2, 9, 4], "texture": "#5"},
+				"down": {"uv": [7, 2, 9, 4], "texture": "#5"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, -135, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, -135, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -180, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -180, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 45, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"head": {
+			"rotation": [0, -180, 0]
+		},
+		"fixed": {
+			"rotation": [0, -180, 0],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
+}

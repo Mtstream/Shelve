@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#M#",
+        "#I#",
+        "#G#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:blackstone"
+        },
+        "M": {
+            "item": "minecraft:magma_cream"
+        },
+        "I": {
+            "item": "minecraft:iron_nugget"
+        },
+        "G": {
+            "item": "shelve:furious_obsidian"
+        }
+    },
+    "result": {
+        "item": "shelve:flame_thrower",
+        "count": 1}
+}
