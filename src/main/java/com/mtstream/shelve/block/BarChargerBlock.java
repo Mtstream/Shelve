@@ -42,12 +42,5 @@ public class BarChargerBlock extends HorizontalDirectionalBlock{
 			lev.setBlockAndUpdate(pos, state.setValue(POWERED, powered));
 			lev.updateNeighborsAt(pos, this);
 		}
-		Direction[] neighbor = new Direction[] {state.getValue(FACING),state.getValue(FACING).getOpposite(),Direction.UP,Direction.DOWN};
-		for(Direction dir:neighbor) {
-			BlockState neiState = lev.getBlockState(pos.relative(dir));
-			if(neiState.getBlock() instanceof CopperBarBlock) {
-				lev.setBlockAndUpdate(pos.relative(dir), neiState.setValue(CopperBarBlock.ISSRC, powered));
-			}
-		}
 	}
 }

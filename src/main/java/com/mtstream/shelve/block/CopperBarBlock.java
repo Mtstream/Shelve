@@ -15,6 +15,9 @@ import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.TieredItem;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -43,7 +46,10 @@ public class CopperBarBlock extends IronBarsBlock{
 	@Override
 	public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest,
 			FluidState fluid) {
-		if(state.getValue(VOLTAGE)>0)this.shock(level, player, state.getValue(VOLTAGE));
+		Item item = player.getItemInHand(player.getUsedItemHand()).getItem();
+		if(!(item instanceof TieredItem)||((TieredItem) item).getTier() != Tiers.WOOD) {
+			if(state.getValue(VOLTAGE)>0&&!level.isClientSide)this.shock(level, player, state.getValue(VOLTAGE));
+		}
 		return super.onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);
 	}
 	@Override
