@@ -8,6 +8,8 @@
     "shelve:static_detector",
     "shelve:resonator",
     "shelve:rheostat",
-    "shelve:bear_trap"
+    "shelve:bear_trap",
+    "shelve:bar_charger",
+    "shelve:frame_thrower"
   ]
 } 
