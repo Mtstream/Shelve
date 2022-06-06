@@ -1,0 +1,34 @@
+{
+	"variants":{
+		"gunpowder=0":{
+			"model":"shelve:block/explosive_crate_0"
+		},
+		"gunpowder=1":{
+			"model":"shelve:block/explosive_crate_1"
+		},
+		"gunpowder=2":{
+			"model":"shelve:block/explosive_crate_2"
+		},
+		"gunpowder=3":{
+			"model":"shelve:block/explosive_crate_3"
+		},
+		"gunpowder=4":{
+			"model":"shelve:block/explosive_crate_4"
+		},
+		"gunpowder=5":{
+			"model":"shelve:block/explosive_crate_5"
+		},
+		"gunpowder=6":{
+			"model":"shelve:block/explosive_crate_6"
+		},
+		"gunpowder=7":{
+			"model":"shelve:block/explosive_crate_7"
+		},
+		"gunpowder=8":{
+			"model":"shelve:block/explosive_crate_8"
+		},
+		"gunpowder=9":{
+			"model":"shelve:block/explosive_crate_9"
+		}
+	}
+}

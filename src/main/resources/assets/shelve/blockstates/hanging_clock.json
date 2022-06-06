@@ -1,0 +1,19 @@
+{
+	"variants":{
+		"facing=north":{
+			"model":"shelve:block/hanging_clock"
+		},
+		"facing=east":{
+			"model":"shelve:block/hanging_clock",
+			"y":90
+		},
+		"facing=south":{
+			"model":"shelve:block/hanging_clock",
+			"y":180
+		},
+		"facing=west":{
+			"model":"shelve:block/hanging_clock",
+			"y":270
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"variants":{
+		"facing=north":{
+			"model":"shelve:block/dice_4"
+		},
+		"facing=east":{
+			"model":"shelve:block/dice_5"
+		},
+		"facing=south":{
+			"model":"shelve:block/dice_3"
+		},
+		"facing=west":{
+			"model":"shelve:block/dice_2"
+		},
+		"facing=up":{
+			"model":"shelve:block/dice_1"
+		},
+		"facing=down":{
+			"model":"shelve:block/dice_6"
+		}
+	}
+}

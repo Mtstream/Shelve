@@ -12,21 +12,29 @@ import com.mtstream.shelve.block.ChimneyBlock;
 import com.mtstream.shelve.block.CopperBarBlock;
 import com.mtstream.shelve.block.CreepshroomBlock;
 import com.mtstream.shelve.block.CrystalBallBlock;
+import com.mtstream.shelve.block.DiceBlock;
 import com.mtstream.shelve.block.EggCartonBlock;
+import com.mtstream.shelve.block.ExplosiveCrateBlock;
 import com.mtstream.shelve.block.FireCrackerBlock;
 import com.mtstream.shelve.block.FlameThrowerBlock;
+import com.mtstream.shelve.block.FramedEndStoneBlock;
 import com.mtstream.shelve.block.FuriousObsidianBlock;
+import com.mtstream.shelve.block.GlassTubeBlock;
 import com.mtstream.shelve.block.HarvesterBlock;
 import com.mtstream.shelve.block.HumidityDetectorBlock;
 import com.mtstream.shelve.block.IgniterBlock;
 import com.mtstream.shelve.block.InstantTntBlock;
 import com.mtstream.shelve.block.MegaGlowBerryBlock;
 import com.mtstream.shelve.block.MilkCauldron;
+import com.mtstream.shelve.block.NailBlock;
 import com.mtstream.shelve.block.ResonatorBlock;
+import com.mtstream.shelve.block.RespawnPendulumBlock;
 import com.mtstream.shelve.block.RheostatBlock;
 import com.mtstream.shelve.block.ShearerBlock;
 import com.mtstream.shelve.block.StaticDetectorBlock;
 import com.mtstream.shelve.block.TrashCanBlock;
+import com.mtstream.shelve.block.WallClockBlock;
+import com.mtstream.shelve.item.DiceItem;
 import com.mtstream.shelve.item.blockItem.ToolTipBlockItem;
 
 import net.minecraft.world.item.BlockItem;
@@ -165,7 +173,32 @@ public class BlockInit {
 			() -> new FuriousObsidianBlock(BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN).dynamicShape().sound(SoundType.STONE)
 					.requiresCorrectToolForDrops().strength(50.0F, 1200.0F)),
 			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
-	
+	public static final RegistryObject<Block> FRAMED_END_STONE = register("framed_end_stone",
+			() -> new FramedEndStoneBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).dynamicShape().sound(SoundType.STONE)
+					.requiresCorrectToolForDrops().strength(50.0F, 600.0F).explosionResistance(1145141919)),
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+	public static final RegistryObject<Block> NAIL = register("nail",
+			() -> new NailBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).dynamicShape().sound(SoundType.METAL)
+					.instabreak()), 
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+	public static final RegistryObject<Block> DICE = register("dice",
+			() -> new DiceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).dynamicShape().sound(SoundType.METAL)
+					.instabreak()), 
+			object -> () -> new DiceItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+	public static final RegistryObject<Block> HANGING_CLOCK = register("hanging_clock",
+			() -> new WallClockBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).dynamicShape().sound(SoundType.METAL)
+					.instabreak()), 
+			object -> () -> new BlockItem(object.get(), new Item.Properties()));
+	public static final RegistryObject<Block> EXPLOSIVE_CRATE = register("explosive_crate",
+			() -> new ExplosiveCrateBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_WOOD).dynamicShape().sound(SoundType.WOOD)), 
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+	public static final RegistryObject<Block> GLASS_TUBE = register("glass_tube",
+			() -> new GlassTubeBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).dynamicShape().sound(SoundType.GLASS).lightLevel($->{return GlassTubeBlock.getLightLevel($);})
+					.emissiveRendering((s,l,p)->{return GlassTubeBlock.isEmissive(s);})), 
+			object -> () -> new BlockItem(object.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+	public static final RegistryObject<Block> RESPAWN_PENDULUM = register("respawn_pendulum",
+			() -> new RespawnPendulumBlock(BlockBehaviour.Properties.copy(Blocks.RESPAWN_ANCHOR).dynamicShape().sound(SoundType.STONE)), 
+			object -> () -> new BlockItem(object.get(), new Item.Properties()));
 	
 	
 	

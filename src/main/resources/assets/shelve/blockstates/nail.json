@@ -1,0 +1,19 @@
+{
+	"variants":{
+		"facing=north":{
+			"model":"shelve:block/nail"
+		},
+		"facing=east":{
+			"model":"shelve:block/nail",
+			"y":90
+		},
+		"facing=south":{
+			"model":"shelve:block/nail",
+			"y":180
+		},
+		"facing=west":{
+			"model":"shelve:block/nail",
+			"y":270
+		}
+	}
+}

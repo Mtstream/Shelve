@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/respawn_anchor_0",
+    "textures": {
+        "top": "shelve:block/respawn_pendulum_top_off",
+        "bottom": "shelve:block/framed_end_stone",
+        "side": "shelve:block/respawn_pendulum_side0"
+      }
+}

@@ -1,0 +1,16 @@
+{
+	"variants":{
+		"tearing=0":{
+			"model":"shelve:block/framed_end_stone"
+		},
+		"tearing=1":{
+			"model":"shelve:block/framed_end_stone_1"
+		},
+		"tearing=2":{
+			"model":"shelve:block/framed_end_stone_2"
+		},
+		"tearing=3":{
+			"model":"shelve:block/framed_end_stone_3"
+		}
+	}
+}

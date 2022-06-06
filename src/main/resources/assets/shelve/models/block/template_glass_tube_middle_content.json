@@ -1,0 +1,31 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "shelve:block/glass_tube_connect",
+		"particle": "shelve:block/glass_tube"
+	},
+	"elements": [
+		{
+			"from": [5, 0, 5],
+			"to": [11, 16, 11],
+			"faces": {
+				"north": {"uv": [4, 0, 10, 15], "texture": "#1"},
+				"east": {"uv": [4, 0, 10, 16], "texture": "#1"},
+				"south": {"uv": [4, 0, 10, 16], "texture": "#1"},
+				"west": {"uv": [4, 0, 10, 16], "texture": "#1"}
+			}
+		},
+		{
+			"from": [6, 0, 6],
+			"to": [10, 16, 10],
+			"faces": {
+				"north": {"uv": [6, 0, 10, 16], "texture": "#content"},
+				"east": {"uv": [6, 0, 10, 16], "texture": "#content"},
+				"south": {"uv": [6, 0, 10, 16], "texture": "#content"},
+				"west": {"uv": [6, 0, 10, 16], "texture": "#content"},
+				"up": {"uv": [6, 0, 10, 4], "texture": "#content"},
+				"down": {"uv": [6, 12, 10, 16], "texture": "#content"}
+			}
+		}
+	]
+}

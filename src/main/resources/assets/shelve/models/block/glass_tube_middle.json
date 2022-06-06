@@ -1,0 +1,19 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "shelve:block/glass_tube_connect",
+		"particle": "shelve:block/glass_tube"
+	},
+	"elements": [
+		{
+			"from": [5, 0, 5],
+			"to": [11, 16, 11],
+			"faces": {
+				"north": {"uv": [4, 0, 10, 15], "texture": "#1"},
+				"east": {"uv": [4, 0, 10, 16], "texture": "#1"},
+				"south": {"uv": [4, 0, 10, 16], "texture": "#1"},
+				"west": {"uv": [4, 0, 10, 16], "texture": "#1"}
+			}
+		}
+	]
+}

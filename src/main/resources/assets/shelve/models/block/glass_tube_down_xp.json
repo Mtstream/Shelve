@@ -1,0 +1,6 @@
+{
+  "parent": "shelve:block/template_glass_tube_down_content",
+  "textures": {
+    "content": "shelve:block/glass_tube_xp"
+  }
+}
